@@ -14,18 +14,12 @@ const theme = ref(null); // darkTheme
 
 <template>
   <n-config-provider :theme="theme" :locale="enUS" :date-locale="dateEnUS">
-    <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   </n-config-provider>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 </style>
