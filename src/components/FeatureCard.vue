@@ -9,7 +9,5 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
-
 defineProps<{ svgSrc: string; title: string; content: string }>();
 </script>

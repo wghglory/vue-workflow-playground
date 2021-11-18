@@ -20,4 +20,10 @@ module.exports = {
     'import/no-unresolved': [0, 'never'],
     'vue/no-v-model-argument': [0, 'never'],
   },
+  globals: {
+    // import { defineProps } from 'vue'
+    // defineProps在<script setup>中自动可用，无需导入
+    defineProps: true,
+    defineEmits: true,
+  },
 };
