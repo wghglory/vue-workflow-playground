@@ -36,7 +36,7 @@ const menuOptions = [
         RouterLink,
         {
           to: {
-            path: '/',
+            name: 'Home',
           },
         },
         { default: () => 'Home' },
@@ -50,7 +50,7 @@ const menuOptions = [
         RouterLink,
         {
           to: {
-            path: '/api',
+            name: 'API',
           },
         },
         { default: () => 'API' },
@@ -63,7 +63,7 @@ const menuOptions = [
         RouterLink,
         {
           to: {
-            path: 'about',
+            name: 'About',
           },
         },
         { default: () => 'About' },
