@@ -18,5 +18,6 @@ module.exports = {
   rules: {
     'import/extensions': [0, 'never'],
     'import/no-unresolved': [0, 'never'],
+    'vue/no-v-model-argument': [0, 'never'],
   },
 };
