@@ -1,5 +1,5 @@
 <template>
-  <header class="flex items-center py-2 px-4 bg-gray-600 text-white">
+  <header class="flex items-center py-2 px-4 text-white fixed w-full" style="background: rgb(0 54 77)">
     <h1 class="pr-6">
       <router-link to="/" class="flex items-center">
         <n-icon size="40">

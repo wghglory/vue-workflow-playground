@@ -5,20 +5,39 @@ import { ref } from 'vue';
 // import HelloWorld from './components/HelloWorld.vue';
 import TheHeader from './components/TheHeader.vue';
 
-import { NConfigProvider, NLayout } from 'naive-ui';
+import { NConfigProvider, GlobalThemeOverrides, NLayout } from 'naive-ui';
 // locale & dateLocale
 import { enUS, dateEnUS, darkTheme } from 'naive-ui';
 
 // https://www.naiveui.com/en-US/dark/docs/theme
 // const theme = ref(null); // darkTheme
-const theme = ref(darkTheme); // darkTheme
+const theme = ref(null); // darkTheme
+
+const lightThemeOverrides: GlobalThemeOverrides = {
+  Layout: {
+    colorEmbedded: '#F5FBFD',
+  },
+  // ...
+};
+
+const darkThemeOverrides: GlobalThemeOverrides = {
+  Layout: {
+    colorEmbedded: 'hsl(198,23%,23%)',
+  },
+};
 </script>
 
 <template>
-  <n-config-provider :theme="theme" :locale="enUS" :date-locale="dateEnUS" class="h-full">
+  <n-config-provider
+    :theme="theme"
+    :theme-overrides="theme === null ? lightThemeOverrides : darkThemeOverrides"
+    :locale="enUS"
+    :date-locale="dateEnUS"
+    class="h-full"
+  >
     <n-layout content-style="display:flex;flex-direction:column;" embedded>
       <TheHeader />
-      <main class="p-6 flex-1">
+      <main class="p-6 flex-1" style="margin-top: 60px">
         <router-view></router-view>
       </main>
     </n-layout>
@@ -30,9 +49,24 @@ const theme = ref(darkTheme); // darkTheme
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+}
+
 html,
 body {
   height: 100vh;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .n-layout .n-layout-scroll-container {
