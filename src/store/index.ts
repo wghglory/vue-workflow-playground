@@ -15,6 +15,16 @@ const store = createStore<State>({
       state.count++;
     },
   },
+  actions: {
+    increment(context) {
+      context.commit('increment');
+    },
+  },
+  getters: {
+    double(state: State) {
+      return 2 * state.count;
+    },
+  },
 });
 
 export default store;
