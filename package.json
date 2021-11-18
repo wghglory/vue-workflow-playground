@@ -9,6 +9,7 @@
     "format": "./node_modules/.bin/prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
+    "@singleton-i18n/js-core-sdk": "^0.5.2",
     "axios": "^0.24.0",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12"
