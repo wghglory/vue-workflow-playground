@@ -2,16 +2,17 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import { ref } from 'vue';
+// import { useStore } from 'vuex';
+
+import { NConfigProvider, GlobalThemeOverrides, NLayout, enUS, dateEnUS, darkTheme } from 'naive-ui';
+
+// import http from '~/utils/axios';
+
 // import HelloWorld from './components/HelloWorld.vue';
 import TheHeader from './components/TheHeader.vue';
 
-import { NConfigProvider, GlobalThemeOverrides, NLayout } from 'naive-ui';
-// locale & dateLocale
-import { enUS, dateEnUS, darkTheme } from 'naive-ui';
-
 // https://www.naiveui.com/en-US/dark/docs/theme
-// const theme = ref(null); // darkTheme
-const theme = ref(null); // darkTheme
+const theme = ref(darkTheme); // darkTheme
 
 const lightThemeOverrides: GlobalThemeOverrides = {
   Layout: {
@@ -25,6 +26,14 @@ const darkThemeOverrides: GlobalThemeOverrides = {
     colorEmbedded: 'hsl(198,23%,23%)',
   },
 };
+
+// const getData = () => {
+//   http.get('/current-user').then((res: any) => {
+//     console.log(res);
+//   });
+// };
+
+// const store = useStore();
 </script>
 
 <template>

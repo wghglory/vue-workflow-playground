@@ -3,29 +3,43 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
-    "start": "vite",
+    "start": "vite --host",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "format": "./node_modules/.bin/prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
+    "format": "./node_modules/.bin/prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@singleton-i18n/js-core-sdk": "^0.5.2",
     "@vicons/ionicons5": "^0.11.0",
+    "@vitejs/plugin-vue": "^1.9.3",
     "axios": "^0.24.0",
     "naive-ui": "^2.20.3",
     "tailwindcss": "^2.2.19",
     "vfonts": "^0.1.0",
+    "vite": "^2.6.4",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.9.3",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
     "autoprefixer": "^10.4.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.1.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.0.2",
     "postcss": "^8.3.11",
     "prettier": "^2.4.1",
     "typescript": "^4.4.3",
-    "vite": "^2.6.4",
     "vue-tsc": "^0.3.0"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts}": "eslint --fix"
   }
 }

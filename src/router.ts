@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
-import Home from './pages/Home.vue';
-import About from './pages/About.vue';
+import HomePage from './pages/HomePage.vue';
+import AboutPage from './pages/AboutPage.vue';
 
 const routes: RouteRecordRaw[] = [
-  { path: '/', name: 'home', component: Home },
-  { path: '/about', name: 'about', component: About },
+  { path: '/', name: 'Home', component: HomePage },
+  { path: '/about', name: 'About', component: AboutPage },
   {
     path: '/:currentPath(.*)*', // no matching found
-    redirect: (_) => {
+    redirect: () => {
       return { path: '/404' };
     },
   },
@@ -18,7 +18,7 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior() {
     return {
       el: '#app',
       top: 0,

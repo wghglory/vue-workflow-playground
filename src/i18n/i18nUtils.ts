@@ -1,4 +1,4 @@
-import { i18nClient } from './i18nClient';
+import i18nClient from './i18nClient';
 
 export const l10n = (key: string, args?: any) => {
   return i18nClient.l10nService.getMessage(key, args);

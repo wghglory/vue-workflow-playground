@@ -9,7 +9,7 @@
       </router-link>
     </h1>
     <nav class="flex-1">
-      <n-menu v-model:value="activeKey" :inverted="true" :options="menuOptions" mode="horizontal" />
+      <n-menu v-model="activeKey" :inverted="true" :options="menuOptions" mode="horizontal" />
       <!-- <router-link to="/">Go to Home</router-link>
     <router-link to="/about">Go to About</router-link> -->
     </nav>
@@ -21,13 +21,7 @@ import { h, ref } from 'vue';
 import { RouterLink } from 'vue-router';
 import { NIcon, NMenu } from 'naive-ui';
 
-import {
-  BookOutline as BookIcon,
-  PersonOutline as PersonIcon,
-  WineOutline as WineIcon,
-  HomeOutline as HomeIcon,
-  CloudOutline,
-} from '@vicons/ionicons5';
+import { HomeOutline as HomeIcon, CloudOutline } from '@vicons/ionicons5';
 
 function renderIcon(icon: any) {
   return () => h(NIcon, null, { default: () => h(icon) });

@@ -189,10 +189,12 @@ const home = {
   'home.section4Content': 'Provider gets consolidated usage report and monthly billing checks for every customer.',
 };
 
-export const ENGLISH = {
+const ENGLISH = {
   ...common,
   ...cloudConnection,
   ...tenant,
   ...cloudServices,
   ...home,
 };
+
+export default ENGLISH;
