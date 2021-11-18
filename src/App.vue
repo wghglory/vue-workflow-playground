@@ -5,20 +5,23 @@ import { ref } from 'vue';
 // import HelloWorld from './components/HelloWorld.vue';
 import TheHeader from './components/TheHeader.vue';
 
-import { NConfigProvider, NInput, NDatePicker, NSpace } from 'naive-ui';
+import { NConfigProvider, NLayout } from 'naive-ui';
 // locale & dateLocale
 import { enUS, dateEnUS, darkTheme } from 'naive-ui';
 
 // https://www.naiveui.com/en-US/dark/docs/theme
-const theme = ref(null); // darkTheme
+// const theme = ref(null); // darkTheme
+const theme = ref(darkTheme); // darkTheme
 </script>
 
 <template>
-  <n-config-provider :theme="theme" :locale="enUS" :date-locale="dateEnUS">
-    <TheHeader />
-    <main class="p-6">
-      <router-view></router-view>
-    </main>
+  <n-config-provider :theme="theme" :locale="enUS" :date-locale="dateEnUS" class="h-full">
+    <n-layout content-style="display:flex;flex-direction:column;" embedded>
+      <TheHeader />
+      <main class="p-6 flex-1">
+        <router-view></router-view>
+      </main>
+    </n-layout>
   </n-config-provider>
 </template>
 
@@ -32,7 +35,7 @@ body {
   height: 100vh;
 }
 
-#app {
-  height: 100%;
+.n-layout .n-layout-scroll-container {
+  height: 100vh;
 }
 </style>
