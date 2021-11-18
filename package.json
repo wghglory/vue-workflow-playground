@@ -13,6 +13,7 @@
     "@singleton-i18n/js-core-sdk": "^0.5.2",
     "@vicons/ionicons5": "^0.11.0",
     "@vitejs/plugin-vue": "^1.9.3",
+    "@vitejs/plugin-vue-jsx": "^1.2.0",
     "axios": "^0.24.0",
     "naive-ui": "^2.20.3",
     "tailwindcss": "^2.2.19",

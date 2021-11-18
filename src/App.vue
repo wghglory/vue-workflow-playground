@@ -12,7 +12,8 @@ import { NConfigProvider, GlobalThemeOverrides, NLayout, enUS, dateEnUS, darkThe
 // import http from '~/utils/axios';
 
 // import HelloWorld from './components/HelloWorld.vue';
-import TheHeader from './components/TheHeader.vue';
+// import TheHeader from './components/TheHeader.vue';
+import TheHeader from './components/TheHeader';
 
 useQueryProvider();
 

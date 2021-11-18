@@ -16,12 +16,12 @@
   </header>
 </template>
 
-<script setup lang="ts">
+<script setup lang="tsx">
 import { h, ref } from 'vue';
 import { RouterLink } from 'vue-router';
 import { NIcon, NMenu } from 'naive-ui';
 
-import { HomeOutline as HomeIcon, CloudOutline } from '@vicons/ionicons5';
+import { HomeOutline, CloudOutline } from '@vicons/ionicons5';
 
 function renderIcon(icon: any) {
   return () => h(NIcon, null, { default: () => h(icon) });
@@ -31,43 +31,48 @@ const activeKey = ref(null);
 
 const menuOptions = [
   {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: 'Home',
-          },
-        },
-        { default: () => 'Home' },
-      ),
+    // label: () =>
+    //   h(
+    //     RouterLink,
+    //     {
+    //       to: {
+    //         name: 'Home',
+    //       },
+    //     },
+    //     { default: () => 'Home' },
+    //   ),
+    label: () => {
+      return <RouterLink to={{ name: 'Home' }}>Home</RouterLink>;
+    },
     key: 'home',
-    icon: renderIcon(HomeIcon),
+    icon: renderIcon(HomeOutline),
   },
   {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: 'API',
-          },
-        },
-        { default: () => 'API' },
-      ),
+    // label: () =>
+    //   h(
+    //     RouterLink,
+    //     {
+    //       to: {
+    //         name: 'API',
+    //       },
+    //     },
+    //     { default: () => 'API' },
+    //   ),
+    label: () => <RouterLink to={{ name: 'API' }}>API</RouterLink>,
     key: 'api',
   },
   {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: 'About',
-          },
-        },
-        { default: () => 'About' },
-      ),
+    // label: () =>
+    //   h(
+    //     RouterLink,
+    //     {
+    //       to: {
+    //         name: 'About',
+    //       },
+    //     },
+    //     { default: () => 'About' },
+    //   ),
+    label: () => <RouterLink to={{ name: 'About' }}>About</RouterLink>,
     key: 'about',
   },
 ];
