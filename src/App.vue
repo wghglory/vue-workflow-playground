@@ -26,14 +26,6 @@ const darkThemeOverrides: GlobalThemeOverrides = {
     colorEmbedded: 'hsl(198,23%,23%)',
   },
 };
-
-// const getData = () => {
-//   http.get('/current-user').then((res: any) => {
-//     console.log(res);
-//   });
-// };
-
-// const store = useStore();
 </script>
 
 <template>
