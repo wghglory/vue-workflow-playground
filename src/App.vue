@@ -1,6 +1,9 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+import { useQueryProvider } from 'vue-query';
+import { VueQueryDevTools } from 'vue-query/devtools';
+
 import { ref } from 'vue';
 // import { useStore } from 'vuex';
 
@@ -10,6 +13,8 @@ import { NConfigProvider, GlobalThemeOverrides, NLayout, enUS, dateEnUS, darkThe
 
 // import HelloWorld from './components/HelloWorld.vue';
 import TheHeader from './components/TheHeader.vue';
+
+useQueryProvider();
 
 // https://www.naiveui.com/en-US/dark/docs/theme
 const theme = ref(darkTheme); // darkTheme
@@ -42,6 +47,7 @@ const darkThemeOverrides: GlobalThemeOverrides = {
         <router-view></router-view>
       </main>
     </n-layout>
+    <VueQueryDevTools />
   </n-config-provider>
 </template>
 

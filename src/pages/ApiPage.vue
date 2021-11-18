@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="flex items-center mb-4">
-      <n-input type="text" v-model:value="input" autosize style="min-width: 20%" class="mr-4" />
-      <n-button @click="setQuery">搜索</n-button>
+      <n-input type="text" v-model:value="query" autosize style="min-width: 20%" class="mr-4" />
+      <n-button @click="refetch()">Search</n-button>
     </div>
-    <div v-if="loading">Loading ...</div>
-    <div v-else-if="error">Something went wrong ...</div>
+    <div v-if="isLoading || isFetching">Loading ...</div>
+    <div v-else-if="isError">Something went wrong ...</div>
     <ul v-else>
-      <li v-for="item of hits" :key="item.objectID">
+      <li v-for="item of data?.hits" :key="item.objectID">
         <a :href="item.url">{{ item.title }}</a>
       </li>
     </ul>
@@ -15,7 +15,8 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, toRefs, onMounted, watchEffect } from 'vue';
+import { useQuery } from 'vue-query';
+import { ref } from 'vue';
 import { NInput, NButton } from 'naive-ui';
 
 interface Hit {
@@ -24,44 +25,13 @@ interface Hit {
   title: string;
 }
 
-const state: {
-  input: string;
-  query: string;
-  hits: Hit[];
-  error: boolean;
-  loading: boolean;
-} = reactive({
-  input: 'vue',
-  query: 'vue',
-  hits: [],
-  error: false,
-  loading: false,
-});
+const query = ref('vue');
 
-const fetchData = async (query: string) => {
-  state.error = false;
-  state.loading = true;
-
-  try {
-    const data = await fetch(`https://hn.algolia.com/api/v1/search?query=${query}`).then((rsp) => rsp.json());
-    state.hits = data.hits;
-  } catch {
-    state.error = true;
-  }
-  state.loading = false;
+const fetchData = async (q: string): Promise<{ hits: Hit[] }> => {
+  return fetch(`https://hn.algolia.com/api/v1/search?query=${q}`).then((res) => res.json());
 };
 
-const setQuery = () => {
-  state.query = state.input;
-};
-
-onMounted(() => {
-  watchEffect(() => {
-    fetchData(state.query);
-  });
-});
-
-const { input, hits, loading, error } = toRefs(state);
+const { isLoading, isFetching, isError, data, refetch } = useQuery('getHits', () => fetchData(query.value));
 </script>
 
 <style scoped></style>
