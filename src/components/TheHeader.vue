@@ -50,6 +50,19 @@ const menuOptions = [
         RouterLink,
         {
           to: {
+            path: '/api',
+          },
+        },
+        { default: () => 'API' },
+      ),
+    key: 'api',
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
             path: 'about',
           },
         },
