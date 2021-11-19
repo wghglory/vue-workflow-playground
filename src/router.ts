@@ -1,16 +1,17 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
 import HomePage from './pages/HomePage.vue';
-import AboutPage from './pages/AboutPage.vue';
+import VuexPage from './pages/VuexPage.vue';
 
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'Home', component: HomePage },
-  { path: '/about', name: 'About', component: AboutPage },
+  { path: '/vuex', name: 'Vuex', component: VuexPage },
   { path: '/api', name: 'API', component: () => import('~/pages/ApiPage.vue') },
+  { path: '/not-found', name: 'NotFound', component: () => import('~/pages/NotFoundPage.vue') },
   {
     path: '/:currentPath(.*)*', // no matching found
     redirect: () => {
-      return { path: '/404' };
+      return { path: '/not-found' };
     },
   },
 ];

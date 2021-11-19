@@ -67,13 +67,13 @@ const menuOptions = [
     //     RouterLink,
     //     {
     //       to: {
-    //         name: 'About',
+    //         name: 'Vuex',
     //       },
     //     },
-    //     { default: () => 'About' },
+    //     { default: () => 'Vuex' },
     //   ),
-    label: () => <RouterLink to={{ name: 'About' }}>About</RouterLink>,
-    key: 'about',
+    label: () => <RouterLink to={{ name: 'Vuex' }}>Vuex</RouterLink>,
+    key: 'vuex',
   },
 ];
 </script>

@@ -20,8 +20,8 @@ const menuOptions = [
     key: 'api',
   },
   {
-    label: () => <RouterLink to={{ name: 'About' }}>About</RouterLink>,
-    key: 'about',
+    label: () => <RouterLink to={{ name: 'Vuex' }}>Vuex</RouterLink>,
+    key: 'vuex',
   },
 ];
 
