@@ -1,9 +1,9 @@
 import { createApp } from 'vue';
+import store, { key } from './store';
 import App from './App.vue';
 import 'vfonts/Lato.css';
 
 import router from './router';
-import store from './store';
 
 import i18nClient from './i18n/i18nClient';
 
@@ -12,7 +12,7 @@ import i18nClient from './i18n/i18nClient';
 })();
 
 const app = createApp(App);
-app.use(store);
+app.use(store, key);
 app.use(router);
 
 app.mount('#app');

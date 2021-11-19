@@ -1,12 +1,20 @@
-import { createStore } from 'vuex';
+import { InjectionKey } from 'vue';
+import { createStore, useStore as baseUseStore, Store } from 'vuex';
 
 export interface State {
   count: number;
 }
 
-const store = createStore<State>({
+export const key: InjectionKey<Store<State>> = Symbol('storeKey');
+
+export const store = createStore<State>({
   state: {
     count: 0,
+  },
+  getters: {
+    double(state: State) {
+      return 2 * state.count;
+    },
   },
   mutations: {
     increment(state) {
@@ -18,12 +26,16 @@ const store = createStore<State>({
     increment(context) {
       context.commit('increment');
     },
-  },
-  getters: {
-    double(state: State) {
-      return 2 * state.count;
+    asyncIncrement({ commit }) {
+      setTimeout(() => {
+        commit('increment');
+      }, 500);
     },
   },
 });
+
+export function useStore() {
+  return baseUseStore(key);
+}
 
 export default store;
