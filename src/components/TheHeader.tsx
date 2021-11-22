@@ -23,6 +23,10 @@ const menuOptions = [
     label: () => <RouterLink to={{ name: 'Vuex' }}>Vuex</RouterLink>,
     key: 'vuex',
   },
+  {
+    label: () => <RouterLink to={{ name: 'LogicFlow' }}>Logic Flow</RouterLink>,
+    key: 'logicFlow',
+  },
 ];
 
 export default defineComponent({

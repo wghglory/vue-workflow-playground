@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@logicflow/core": "^0.7.8",
     "@singleton-i18n/js-core-sdk": "^0.5.2",
     "@vicons/ionicons5": "^0.11.0",
     "@vitejs/plugin-vue": "^1.9.3",
