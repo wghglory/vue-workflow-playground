@@ -1,4 +1,4 @@
-import { RectNodeModel } from '@logicflow/core';
+import { EventArgs, RectNodeModel } from '@logicflow/core';
 
 export default class SquareModel extends RectNodeModel {
   setAttributes() {
@@ -11,6 +11,17 @@ export default class SquareModel extends RectNodeModel {
     };
 
     console.log(this.properties);
+
+    this.menu = [
+      {
+        text: '自定义元素菜单',
+        icon: true,
+        className: 'custom-menu',
+        callback: (res: EventArgs) => {
+          this.graphModel.eventCenter.emit('custom:square:event', res);
+        },
+      },
+    ];
 
     this.width = size;
     this.height = size;

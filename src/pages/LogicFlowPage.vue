@@ -11,9 +11,7 @@ import LogicFlow from '@logicflow/core';
 import { Control, Menu, DndPanel, SelectionSelect } from '@logicflow/extension';
 import '@logicflow/core/dist/style/index.css';
 import '@logicflow/extension/lib/style/index.css';
-
-import SquareModel from '~/components/logicflow/SquareModel';
-import SquareView from '~/components/logicflow/SquareView';
+import CustomSquare from '~/components/logicflow/square';
 
 LogicFlow.use(Control); // 控制面板
 LogicFlow.use(Menu); // 右键菜单
@@ -37,7 +35,7 @@ const data = reactive({
     },
     {
       id: 10,
-      type: 'square',
+      type: 'custom:square',
       x: 300,
       y: 200,
       text: '正方形',
@@ -80,11 +78,7 @@ onMounted(() => {
     },
   });
 
-  lf.value.register({
-    type: 'square',
-    view: SquareView,
-    model: SquareModel,
-  });
+  lf.value.register(CustomSquare);
 
   lf.value.setPatternItems([
     {
@@ -129,6 +123,11 @@ onMounted(() => {
   ]);
 
   lf.value.render(data);
+
+  lf.value.on('custom:square:event', (res: any) => {
+    console.log(res);
+    alert('接收到自定义节点菜单触发事件');
+  });
 });
 </script>
 
