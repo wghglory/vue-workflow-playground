@@ -73,6 +73,11 @@ onMounted(() => {
       type: 'dot',
       size: 20,
     },
+    style: {
+      rect: {
+        radius: 6,
+      },
+    },
   });
 
   lf.value.register({
