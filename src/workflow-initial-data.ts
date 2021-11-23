@@ -865,16 +865,8 @@ const data = {
           y: 262,
         },
         {
-          x: 460,
-          y: 262,
-        },
-        {
-          x: 460,
-          y: 250,
-        },
-        {
           x: 560,
-          y: 250,
+          y: 262,
         },
         {
           x: 560,
@@ -897,8 +889,8 @@ const data = {
       },
       properties: {},
       text: {
-        x: 1320,
-        y: 320,
+        x: 1340,
+        y: 377,
         value: 'No',
       },
       pointsList: [
@@ -1206,7 +1198,7 @@ const data = {
       },
       properties: {},
       text: {
-        x: 331.015625,
+        x: 450,
         y: 460,
         value: 'Yes',
       },
@@ -1244,7 +1236,7 @@ const data = {
       },
       properties: {},
       text: {
-        x: 520,
+        x: 536,
         y: 660,
         value: 'No',
       },
@@ -1302,6 +1294,11 @@ const data = {
         y: 620,
       },
       properties: {},
+      text: {
+        x: 651,
+        y: 565,
+        value: 'No',
+      },
       pointsList: [
         {
           x: 700,
@@ -1401,6 +1398,11 @@ const data = {
         y: 560,
       },
       properties: {},
+      text: {
+        x: 460,
+        y: 590,
+        value: 'Yes',
+      },
       pointsList: [
         {
           x: 460,
@@ -1729,7 +1731,7 @@ const data = {
       properties: {},
       text: {
         x: 1260,
-        y: 108.015625,
+        y: 189,
         value: 'Yes',
       },
       pointsList: [
