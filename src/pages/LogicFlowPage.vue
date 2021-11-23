@@ -6,13 +6,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted } from 'vue';
+import { ref, reactive, onMounted, onUnmounted } from 'vue';
 import LogicFlow from '@logicflow/core';
 import { Control, Menu, DndPanel, SelectionSelect } from '@logicflow/extension';
 import '@logicflow/core/dist/style/index.css';
 import '@logicflow/extension/lib/style/index.css';
-import CustomSquare from '~/components/logicflow/square';
-import CustomRect from '~/components/logicflow/customRect';
+import CustomSquare from '~/components/logicflow/CustomSquare';
+import CustomRect from '~/components/logicflow/CustomRect';
 import data from '~/workflow-initial-data';
 
 LogicFlow.use(Control); // 控制面板
@@ -201,6 +201,10 @@ onMounted(() => {
   lf.value.on('custom:event', (res: any) => {
     console.log(res);
   });
+});
+
+onUnmounted(() => {
+  lf.value.clearData();
 });
 </script>
 

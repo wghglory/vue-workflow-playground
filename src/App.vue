@@ -82,4 +82,20 @@ body {
 .n-layout .n-layout-scroll-container {
   height: 100vh;
 }
+
+.active-node {
+  transform-origin: 50%;
+  transform-box: fill-box;
+  animation: upDown 1s ease infinite alternate;
+}
+
+@keyframes upDown {
+  0% {
+    transform: rotateX(0);
+  }
+
+  100% {
+    transform: rotateX(20deg);
+  }
+}
 </style>
