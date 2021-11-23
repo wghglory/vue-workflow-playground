@@ -75,6 +75,7 @@ const data: any = reactive({
     {
       source: 50,
       target: 1,
+      label: 'Wow',
     },
   ],
 });
