@@ -184,7 +184,7 @@ const data = {
     },
     {
       id: '8398c903-e9ce-4f07-8831-a88a1effa6b1',
-      type: 'custom:square',
+      type: 'done-rect',
       x: 837,
       y: 441,
       properties: {},
@@ -196,7 +196,7 @@ const data = {
     },
     {
       id: 'd2924a8d-498f-4098-8a5d-4bd0343c3a7b',
-      type: 'custom:rect',
+      type: 'current-rect',
       x: 237,
       y: 561,
       properties: {
@@ -211,7 +211,7 @@ const data = {
     },
     {
       id: '808586f6-a7be-4378-8296-69c44f1e464a',
-      type: 'custom:rect',
+      type: 'current-rect',
       x: 237,
       y: 661,
       properties: {
@@ -225,7 +225,7 @@ const data = {
     },
     {
       id: 'e3a2ccdd-dcfc-4162-b049-7374cbd353f1',
-      type: 'custom:rect',
+      type: 'current-rect',
       x: 237,
       y: 761,
       properties: {
@@ -239,7 +239,7 @@ const data = {
     },
     {
       id: '485de158-1d20-4576-9752-89bfdabd3fde',
-      type: 'custom:rect',
+      type: 'current-rect',
       x: 237,
       y: 861,
       properties: {

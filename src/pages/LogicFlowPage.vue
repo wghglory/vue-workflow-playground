@@ -13,6 +13,7 @@ import '@logicflow/core/dist/style/index.css';
 import '@logicflow/extension/lib/style/index.css';
 import CustomSquare from '~/components/logicflow/CustomSquare';
 import CurrentRect from '~/components/logicflow/CurrentRect';
+import DoneRect from '~/components/logicflow/DoneRect';
 import data from '~/workflow-initial-data';
 
 LogicFlow.use(Control); // 控制面板
@@ -78,8 +79,8 @@ onMounted(() => {
   });
 
   lf.value.register(CustomSquare);
-
   lf.value.register(CurrentRect);
+  lf.value.register(DoneRect);
 
   lf.value.setPatternItems([
     {
