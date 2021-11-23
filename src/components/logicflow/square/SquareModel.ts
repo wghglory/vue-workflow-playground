@@ -3,6 +3,9 @@ import { EventArgs, RectNodeModel } from '@logicflow/core';
 export default class SquareModel extends RectNodeModel {
   setAttributes() {
     const size = 80;
+    this.width = size; // 100, 80 default rect
+    this.height = size;
+
     const circleOnlyAsTarget = {
       message: '正方形节点下一个节点只能是圆形节点',
       validate: (source: any, target: any) => {
@@ -23,8 +26,6 @@ export default class SquareModel extends RectNodeModel {
       },
     ];
 
-    this.width = size;
-    this.height = size;
     this.anchorsOffset = [
       [size / 2, 0],
       [-size / 2, 0],

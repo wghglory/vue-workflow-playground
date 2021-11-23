@@ -14,6 +14,8 @@ export default class SquareView extends RectNode {
       stroke,
       fill,
       strokeWidth,
+      rx: 6,
+      ry: 6,
     };
 
     console.log(attrs);
