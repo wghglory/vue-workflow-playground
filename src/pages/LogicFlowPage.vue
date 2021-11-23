@@ -64,7 +64,8 @@ onMounted(() => {
     container: container.value!,
     stopScrollGraph: true,
     stopZoomGraph: true,
-    isSilentMode: true,
+    edgeTextDraggable: true,
+    // isSilentMode: true,
     grid: false,
     background: {
       color: '#F5FBFD',
@@ -75,6 +76,31 @@ onMounted(() => {
     style: {
       rect: {
         radius: 6,
+        strokeWidth: 1,
+      },
+      circle: {
+        strokeWidth: 1,
+      },
+      diamond: {
+        strokeWidth: 1,
+      },
+      nodeText: {
+        fontSize: 13,
+      },
+      edgeText: {
+        fontSize: 13,
+        dy: -12,
+        dx: 14,
+      } as any,
+      anchor: {
+        fill: '#6edd97',
+      },
+      polyline: {
+        strokeWidth: 1,
+      },
+      arrow: {
+        offset: 6,
+        verticalLength: 3,
       },
     },
   });

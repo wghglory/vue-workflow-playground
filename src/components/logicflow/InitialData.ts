@@ -1383,11 +1383,11 @@ const data = {
           y: 661,
         },
         {
-          x: 356.5,
+          x: 356,
           y: 661,
         },
         {
-          x: 356.5,
+          x: 356,
           y: 641,
         },
         {
@@ -1565,7 +1565,7 @@ const data = {
       properties: {},
       text: {
         x: 476,
-        y: 568,
+        y: 586,
         value: 'Yes',
       },
       pointsList: [
@@ -1710,7 +1710,7 @@ const data = {
       properties: {},
       text: {
         x: 1257,
-        y: 151.83333333333326,
+        y: 151,
         value: 'Yes',
       },
       pointsList: [
@@ -1777,11 +1777,11 @@ const data = {
           y: 711,
         },
         {
-          x: 1258.5,
+          x: 1258,
           y: 711,
         },
         {
-          x: 1258.5,
+          x: 1258,
           y: 681,
         },
         {
