@@ -4,7 +4,8 @@
 
 <script setup lang="ts">
 import { ref, reactive, onMounted, onUnmounted } from 'vue';
-import { Graph, Shape, Addon } from '@antv/x6';
+import { Graph } from '@antv/x6';
+import '~/components/x6/defaultConfig';
 
 const data: any = reactive({
   nodes: [
@@ -14,6 +15,22 @@ const data: any = reactive({
       x: 200,
       y: 350,
       label: 'Default',
+      // angle: -5,
+    },
+    {
+      id: 2,
+      shape: 'red-rect',
+      x: 400,
+      y: 450,
+      label: 'Red Rect',
+      // angle: -5,
+    },
+    {
+      id: 3,
+      shape: 'green-rect',
+      x: 500,
+      y: 450,
+      label: 'Green Rect',
       // angle: -5,
     },
     {
@@ -82,32 +99,6 @@ const data: any = reactive({
 
 const container = ref(null);
 const lf: any = reactive({});
-
-// Default Config
-Shape.Rect.config({
-  width: 80,
-  height: 40,
-  attrs: {
-    rect: {
-      fill: '#fff',
-      stroke: '#000',
-      strokeWidth: 1,
-      rx: 6,
-      ry: 6,
-    },
-    text: {
-      fontSize: 14,
-      fill: '#333',
-      fontFamily: 'Arial, helvetica, sans-serif',
-      textAnchor: 'middle',
-      textVerticalAnchor: 'middle',
-    },
-  },
-});
-Shape.Edge.config({
-  router: 'orth',
-  connector: 'rounded',
-});
 
 onMounted(() => {
   lf.value = new Graph({
