@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { ref, reactive, onMounted, onUnmounted } from 'vue';
 import LogicFlow from '@logicflow/core';
-import { Control, Menu, DndPanel, SelectionSelect } from '@logicflow/extension';
+import { Menu, DndPanel, SelectionSelect } from '@logicflow/extension';
 import '@logicflow/core/dist/style/index.css';
 import '@logicflow/extension/lib/style/index.css';
 import CustomSquare from '~/components/logicflow/CustomSquare';
@@ -16,7 +16,7 @@ import CurrentRect from '~/components/logicflow/CurrentRect';
 import DoneRect from '~/components/logicflow/DoneRect';
 import data from '~/workflow-initial-data';
 
-LogicFlow.use(Control); // control panel
+// LogicFlow.use(Control); // control panel
 LogicFlow.use(Menu); // right click menu
 LogicFlow.use(DndPanel);
 LogicFlow.use(SelectionSelect);
@@ -64,6 +64,7 @@ onMounted(() => {
     container: container.value!,
     stopScrollGraph: true,
     stopZoomGraph: true,
+    isSilentMode: true,
     grid: false,
     background: {
       color: '#F5FBFD',

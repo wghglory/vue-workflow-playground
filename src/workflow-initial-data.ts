@@ -365,7 +365,7 @@ const data = {
     },
     {
       id: 'bug-fix-2',
-      type: 'done-rect',
+      type: 'rect',
       x: 476,
       y: 506,
       properties: {},
