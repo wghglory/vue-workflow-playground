@@ -16,9 +16,9 @@ import CurrentRect from '~/components/logicflow/CurrentRect';
 import DoneRect from '~/components/logicflow/DoneRect';
 import data from '~/workflow-initial-data';
 
-LogicFlow.use(Control); // 控制面板
-LogicFlow.use(Menu); // 右键菜单
-LogicFlow.use(DndPanel); // 拖拽面板
+LogicFlow.use(Control); // control panel
+LogicFlow.use(Menu); // right click menu
+LogicFlow.use(DndPanel);
 LogicFlow.use(SelectionSelect);
 
 // const data = reactive({

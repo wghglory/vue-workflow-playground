@@ -1,7 +1,7 @@
 const data = {
   nodes: [
     {
-      id: '6f71e7cf-823e-470f-a3ef-c9cc92ce0012',
+      id: 'story-review',
       type: 'circle',
       x: 217,
       y: 221,
@@ -13,7 +13,7 @@ const data = {
       },
     },
     {
-      id: 'ccf0465e-ec3f-4c41-9714-c015fad527bc',
+      id: 'pipeline-creation',
       type: 'rect',
       x: 377,
       y: 121,
@@ -25,7 +25,7 @@ const data = {
       },
     },
     {
-      id: '7c08dcad-96f9-4761-a0f9-857f8efe2a09',
+      id: 'design-spec-review',
       type: 'rect',
       x: 377,
       y: 221,
@@ -37,7 +37,7 @@ const data = {
       },
     },
     {
-      id: '1f0bc3e0-0186-44a8-9b93-7473ca01e194',
+      id: 'test-plan-review',
       type: 'rect',
       x: 557,
       y: 301,
@@ -49,7 +49,7 @@ const data = {
       },
     },
     {
-      id: '3881bd46-6380-4e71-b1d6-0bd827423124',
+      id: 'development-ut',
       type: 'rect',
       x: 557,
       y: 181,
@@ -61,7 +61,7 @@ const data = {
       },
     },
     {
-      id: 'da1056aa-fc8a-4ef6-9952-544bed1c2094',
+      id: 'merge-to-feature-branch',
       type: 'rect',
       x: 697,
       y: 181,
@@ -73,7 +73,7 @@ const data = {
       },
     },
     {
-      id: '1f7b787f-193e-4847-a5a3-3e73d560a5d2',
+      id: 'test-case-writing',
       type: 'rect',
       x: 697,
       y: 301,
@@ -85,7 +85,7 @@ const data = {
       },
     },
     {
-      id: 'f0afd931-458f-45ed-82f0-c26dfa5c7ad0',
+      id: 'deploy-to-feature-pipeline',
       type: 'rect',
       x: 837,
       y: 181,
@@ -97,7 +97,7 @@ const data = {
       },
     },
     {
-      id: '9d657e91-1074-4c12-99f1-e67b5768ba6f',
+      id: 'new-feature-test',
       type: 'rect',
       x: 837,
       y: 301,
@@ -109,7 +109,7 @@ const data = {
       },
     },
     {
-      id: 'a93a5154-37da-4449-8c73-75ce117a2642',
+      id: 'bug-report',
       type: 'rect',
       x: 977,
       y: 301,
@@ -121,7 +121,7 @@ const data = {
       },
     },
     {
-      id: '40943aae-d7a0-40c7-b715-5e6baa7331a4',
+      id: 'regression-test-1',
       type: 'rect',
       x: 1117,
       y: 301,
@@ -133,7 +133,7 @@ const data = {
       },
     },
     {
-      id: 'fb4ed2f5-4642-4e58-bb71-ccc2b43c6e5a',
+      id: 'critical-bugs-1',
       type: 'diamond',
       x: 1257,
       y: 301,
@@ -147,7 +147,7 @@ const data = {
       ry: 50,
     },
     {
-      id: '53135fbd-c19c-4eee-9450-db6e0d2a9627',
+      id: 'merge-to-common-branch',
       type: 'rect',
       x: 1257,
       y: 441,
@@ -159,7 +159,7 @@ const data = {
       },
     },
     {
-      id: '7145927e-3f87-4e9d-b058-99e10b476ec6',
+      id: 'deploy-to-uat',
       type: 'rect',
       x: 1117,
       y: 441,
@@ -171,7 +171,7 @@ const data = {
       },
     },
     {
-      id: '6b37ca8b-8520-4376-a4c5-6fda48ce3d81',
+      id: 'regression-test-2',
       type: 'rect',
       x: 977,
       y: 441,
@@ -183,7 +183,7 @@ const data = {
       },
     },
     {
-      id: '8398c903-e9ce-4f07-8831-a88a1effa6b1',
+      id: 'demo',
       type: 'done-rect',
       x: 837,
       y: 441,
@@ -195,7 +195,7 @@ const data = {
       },
     },
     {
-      id: 'd2924a8d-498f-4098-8a5d-4bd0343c3a7b',
+      id: 'sup-test',
       type: 'current-rect',
       x: 237,
       y: 561,
@@ -210,7 +210,7 @@ const data = {
       },
     },
     {
-      id: '808586f6-a7be-4378-8296-69c44f1e464a',
+      id: 'g11n-test',
       type: 'current-rect',
       x: 237,
       y: 661,
@@ -224,7 +224,7 @@ const data = {
       },
     },
     {
-      id: 'e3a2ccdd-dcfc-4162-b049-7374cbd353f1',
+      id: 'ix-documentation',
       type: 'current-rect',
       x: 237,
       y: 761,
@@ -238,7 +238,7 @@ const data = {
       },
     },
     {
-      id: '485de158-1d20-4576-9752-89bfdabd3fde',
+      id: 'marketing',
       type: 'current-rect',
       x: 237,
       y: 861,
@@ -252,7 +252,7 @@ const data = {
       },
     },
     {
-      id: 'f8481669-541e-4eb6-9285-616388974c11',
+      id: 'pre-prod-verify',
       type: 'diamond',
       x: 697,
       y: 441,
@@ -266,7 +266,7 @@ const data = {
       ry: 50,
     },
     {
-      id: '0a963d00-054a-46ca-b24f-34a90751930a',
+      id: 'critical-bug-2',
       type: 'diamond',
       x: 457,
       y: 641,
@@ -280,7 +280,7 @@ const data = {
       ry: 50,
     },
     {
-      id: 'f62ed1ea-5e32-4ae4-8036-12cbd91e5f8b',
+      id: 'merge-to-master-branch',
       type: 'rect',
       x: 617,
       y: 641,
@@ -292,7 +292,7 @@ const data = {
       },
     },
     {
-      id: '5d8a33ed-9ad8-4125-8033-f1d41d10ae07',
+      id: 'bug-fix-1',
       type: 'rect',
       x: 457,
       y: 501,
@@ -304,7 +304,7 @@ const data = {
       },
     },
     {
-      id: 'c4fe91f1-c369-49eb-9d38-4fe8fb849264',
+      id: 'stg-upgrade',
       type: 'rect',
       x: 777,
       y: 641,
@@ -316,7 +316,7 @@ const data = {
       },
     },
     {
-      id: '1da0bf97-e312-4f5d-9a78-28e47c8b53ca',
+      id: 'stg-sanity-test',
       type: 'rect',
       x: 937,
       y: 641,
@@ -328,7 +328,7 @@ const data = {
       },
     },
     {
-      id: 'a6971f7c-c33a-47bc-9510-d165de13e718',
+      id: 'prod-upgrade',
       type: 'rect',
       x: 1077,
       y: 641,
@@ -340,7 +340,7 @@ const data = {
       },
     },
     {
-      id: '399512d4-f919-4169-a1ec-3328699e502d',
+      id: 'prod-sanity-test',
       type: 'rect',
       x: 1217,
       y: 641,
@@ -352,7 +352,7 @@ const data = {
       },
     },
     {
-      id: '32c3c506-87d4-4078-86e6-8caa0bc75216',
+      id: 'release',
       type: 'circle',
       x: 1377,
       y: 761,
@@ -364,7 +364,7 @@ const data = {
       },
     },
     {
-      id: '8077da5b-d952-4335-8595-c12f174c4ad7',
+      id: 'bug-fix-2',
       type: 'rect',
       x: 697,
       y: 61,
@@ -380,8 +380,8 @@ const data = {
     {
       id: 'fbe029b7-48af-4ea3-a917-56006742267c',
       type: 'polyline',
-      sourceNodeId: '6f71e7cf-823e-470f-a3ef-c9cc92ce0012',
-      targetNodeId: 'ccf0465e-ec3f-4c41-9714-c015fad527bc',
+      sourceNodeId: 'story-review',
+      targetNodeId: 'pipeline-creation',
       startPoint: {
         x: 217,
         y: 171,
@@ -409,8 +409,8 @@ const data = {
     {
       id: '824524d6-3f6d-4f46-9741-cc2e154617b9',
       type: 'polyline',
-      sourceNodeId: '6f71e7cf-823e-470f-a3ef-c9cc92ce0012',
-      targetNodeId: '7c08dcad-96f9-4761-a0f9-857f8efe2a09',
+      sourceNodeId: 'story-review',
+      targetNodeId: 'design-spec-review',
       startPoint: {
         x: 267,
         y: 221,
@@ -434,8 +434,8 @@ const data = {
     {
       id: 'd2ce6a45-8352-4e92-b8d3-562a653e5fb6',
       type: 'polyline',
-      sourceNodeId: 'ccf0465e-ec3f-4c41-9714-c015fad527bc',
-      targetNodeId: '3881bd46-6380-4e71-b1d6-0bd827423124',
+      sourceNodeId: 'pipeline-creation',
+      targetNodeId: 'development-ut',
       startPoint: {
         x: 427,
         y: 121,
@@ -467,8 +467,8 @@ const data = {
     {
       id: 'f7d263a2-3c2e-4667-8604-c5f3f3038930',
       type: 'polyline',
-      sourceNodeId: '7c08dcad-96f9-4761-a0f9-857f8efe2a09',
-      targetNodeId: '3881bd46-6380-4e71-b1d6-0bd827423124',
+      sourceNodeId: 'design-spec-review',
+      targetNodeId: 'development-ut',
       startPoint: {
         x: 427,
         y: 223,
@@ -500,8 +500,8 @@ const data = {
     {
       id: '38fcce08-b6f8-47bb-9d2a-0658e4d6765a',
       type: 'polyline',
-      sourceNodeId: '6f71e7cf-823e-470f-a3ef-c9cc92ce0012',
-      targetNodeId: '1f0bc3e0-0186-44a8-9b93-7473ca01e194',
+      sourceNodeId: 'story-review',
+      targetNodeId: 'test-plan-review',
       startPoint: {
         x: 217,
         y: 271,
@@ -529,8 +529,8 @@ const data = {
     {
       id: 'f232b202-56bf-4e17-8d5b-4e20c36dc3fd',
       type: 'polyline',
-      sourceNodeId: '3881bd46-6380-4e71-b1d6-0bd827423124',
-      targetNodeId: 'da1056aa-fc8a-4ef6-9952-544bed1c2094',
+      sourceNodeId: 'development-ut',
+      targetNodeId: 'merge-to-feature-branch',
       startPoint: {
         x: 607,
         y: 181,
@@ -570,8 +570,8 @@ const data = {
     {
       id: '791bf926-131e-4691-bbf8-9a0fb67e99e8',
       type: 'polyline',
-      sourceNodeId: 'da1056aa-fc8a-4ef6-9952-544bed1c2094',
-      targetNodeId: 'f0afd931-458f-45ed-82f0-c26dfa5c7ad0',
+      sourceNodeId: 'merge-to-feature-branch',
+      targetNodeId: 'deploy-to-feature-pipeline',
       startPoint: {
         x: 747,
         y: 181,
@@ -611,8 +611,8 @@ const data = {
     {
       id: '86462115-1fc8-44a0-9655-c1011ce2cec6',
       type: 'polyline',
-      sourceNodeId: '1f0bc3e0-0186-44a8-9b93-7473ca01e194',
-      targetNodeId: '1f7b787f-193e-4847-a5a3-3e73d560a5d2',
+      sourceNodeId: 'test-plan-review',
+      targetNodeId: 'test-case-writing',
       startPoint: {
         x: 607,
         y: 301,
@@ -652,8 +652,8 @@ const data = {
     {
       id: '20404f39-9f62-4a1e-b119-393dbe832b1f',
       type: 'polyline',
-      sourceNodeId: '1f7b787f-193e-4847-a5a3-3e73d560a5d2',
-      targetNodeId: '9d657e91-1074-4c12-99f1-e67b5768ba6f',
+      sourceNodeId: 'test-case-writing',
+      targetNodeId: 'new-feature-test',
       startPoint: {
         x: 747,
         y: 301,
@@ -693,8 +693,8 @@ const data = {
     {
       id: 'c9d5c047-4a73-474c-831e-bba4fea1c15e',
       type: 'polyline',
-      sourceNodeId: 'f0afd931-458f-45ed-82f0-c26dfa5c7ad0',
-      targetNodeId: '9d657e91-1074-4c12-99f1-e67b5768ba6f',
+      sourceNodeId: 'deploy-to-feature-pipeline',
+      targetNodeId: 'new-feature-test',
       startPoint: {
         x: 837,
         y: 221,
@@ -734,8 +734,8 @@ const data = {
     {
       id: '071cfe01-7780-4ef4-bcfc-5dcb7ed17246',
       type: 'polyline',
-      sourceNodeId: '9d657e91-1074-4c12-99f1-e67b5768ba6f',
-      targetNodeId: 'a93a5154-37da-4449-8c73-75ce117a2642',
+      sourceNodeId: 'new-feature-test',
+      targetNodeId: 'bug-report',
       startPoint: {
         x: 887,
         y: 301,
@@ -775,8 +775,8 @@ const data = {
     {
       id: '50108781-1ea3-42b7-86ae-5cc185af8490',
       type: 'polyline',
-      sourceNodeId: 'a93a5154-37da-4449-8c73-75ce117a2642',
-      targetNodeId: '40943aae-d7a0-40c7-b715-5e6baa7331a4',
+      sourceNodeId: 'bug-report',
+      targetNodeId: 'regression-test-1',
       startPoint: {
         x: 1027,
         y: 301,
@@ -816,8 +816,8 @@ const data = {
     {
       id: 'a644dac5-5c31-4498-95c9-86411d3f5676',
       type: 'polyline',
-      sourceNodeId: '40943aae-d7a0-40c7-b715-5e6baa7331a4',
-      targetNodeId: 'fb4ed2f5-4642-4e58-bb71-ccc2b43c6e5a',
+      sourceNodeId: 'regression-test-1',
+      targetNodeId: 'critical-bugs-1',
       startPoint: {
         x: 1167,
         y: 301,
@@ -857,8 +857,8 @@ const data = {
     {
       id: 'e994e268-1897-432d-8028-db2cc23470e2',
       type: 'polyline',
-      sourceNodeId: '7c08dcad-96f9-4761-a0f9-857f8efe2a09',
-      targetNodeId: '1f0bc3e0-0186-44a8-9b93-7473ca01e194',
+      sourceNodeId: 'design-spec-review',
+      targetNodeId: 'test-plan-review',
       startPoint: {
         x: 427,
         y: 243,
@@ -886,8 +886,8 @@ const data = {
     {
       id: '17991fd6-b4ec-4143-ae9a-6273aeef1a05',
       type: 'polyline',
-      sourceNodeId: 'fb4ed2f5-4642-4e58-bb71-ccc2b43c6e5a',
-      targetNodeId: '53135fbd-c19c-4eee-9450-db6e0d2a9627',
+      sourceNodeId: 'critical-bugs-1',
+      targetNodeId: 'merge-to-common-branch',
       startPoint: {
         x: 1307,
         y: 301,
@@ -932,8 +932,8 @@ const data = {
     {
       id: 'fc7a7ea9-03df-49e4-821d-56dba5ea270a',
       type: 'polyline',
-      sourceNodeId: '53135fbd-c19c-4eee-9450-db6e0d2a9627',
-      targetNodeId: '7145927e-3f87-4e9d-b058-99e10b476ec6',
+      sourceNodeId: 'merge-to-common-branch',
+      targetNodeId: 'deploy-to-uat',
       startPoint: {
         x: 1207,
         y: 441,
@@ -973,8 +973,8 @@ const data = {
     {
       id: '09a0c149-305f-4fd1-8e6b-dec32cfaedb6',
       type: 'polyline',
-      sourceNodeId: '7145927e-3f87-4e9d-b058-99e10b476ec6',
-      targetNodeId: '6b37ca8b-8520-4376-a4c5-6fda48ce3d81',
+      sourceNodeId: 'deploy-to-uat',
+      targetNodeId: 'regression-test-2',
       startPoint: {
         x: 1067,
         y: 441,
@@ -1014,8 +1014,8 @@ const data = {
     {
       id: '102dcd82-bc29-4447-99ad-58b290bdc2ca',
       type: 'polyline',
-      sourceNodeId: '6b37ca8b-8520-4376-a4c5-6fda48ce3d81',
-      targetNodeId: '8398c903-e9ce-4f07-8831-a88a1effa6b1',
+      sourceNodeId: 'regression-test-2',
+      targetNodeId: 'demo',
       startPoint: {
         x: 927,
         y: 441,
@@ -1055,8 +1055,8 @@ const data = {
     {
       id: 'b3e0d6ab-f796-49dc-b934-951a5aa810af',
       type: 'polyline',
-      sourceNodeId: '8398c903-e9ce-4f07-8831-a88a1effa6b1',
-      targetNodeId: 'f8481669-541e-4eb6-9285-616388974c11',
+      sourceNodeId: 'demo',
+      targetNodeId: 'pre-prod-verify',
       startPoint: {
         x: 787,
         y: 441,
@@ -1096,8 +1096,8 @@ const data = {
     {
       id: 'ef671096-66d4-49ff-bc7c-d366f73f3b1b',
       type: 'polyline',
-      sourceNodeId: 'f8481669-541e-4eb6-9285-616388974c11',
-      targetNodeId: 'd2924a8d-498f-4098-8a5d-4bd0343c3a7b',
+      sourceNodeId: 'pre-prod-verify',
+      targetNodeId: 'sup-test',
       startPoint: {
         x: 647,
         y: 441,
@@ -1129,8 +1129,8 @@ const data = {
     {
       id: '8e295719-a346-449f-b3fb-b1b5664b9d46',
       type: 'polyline',
-      sourceNodeId: 'f8481669-541e-4eb6-9285-616388974c11',
-      targetNodeId: '808586f6-a7be-4378-8296-69c44f1e464a',
+      sourceNodeId: 'pre-prod-verify',
+      targetNodeId: 'g11n-test',
       startPoint: {
         x: 647,
         y: 441,
@@ -1162,8 +1162,8 @@ const data = {
     {
       id: 'f95043ac-9ad7-477c-bef4-a498c9dc36c6',
       type: 'polyline',
-      sourceNodeId: 'f8481669-541e-4eb6-9285-616388974c11',
-      targetNodeId: 'e3a2ccdd-dcfc-4162-b049-7374cbd353f1',
+      sourceNodeId: 'pre-prod-verify',
+      targetNodeId: 'ix-documentation',
       startPoint: {
         x: 647,
         y: 441,
@@ -1195,8 +1195,8 @@ const data = {
     {
       id: 'd21bca2f-c9d2-4a27-a5e2-5f525c14a7ca',
       type: 'polyline',
-      sourceNodeId: 'f8481669-541e-4eb6-9285-616388974c11',
-      targetNodeId: '485de158-1d20-4576-9752-89bfdabd3fde',
+      sourceNodeId: 'pre-prod-verify',
+      targetNodeId: 'marketing',
       startPoint: {
         x: 647,
         y: 441,
@@ -1233,8 +1233,8 @@ const data = {
     {
       id: 'cd1887b1-57e5-454c-b7bf-e83502fe5b99',
       type: 'polyline',
-      sourceNodeId: '0a963d00-054a-46ca-b24f-34a90751930a',
-      targetNodeId: 'f62ed1ea-5e32-4ae4-8036-12cbd91e5f8b',
+      sourceNodeId: 'critical-bug-2',
+      targetNodeId: 'merge-to-master-branch',
       startPoint: {
         x: 507,
         y: 641,
@@ -1263,8 +1263,8 @@ const data = {
     {
       id: 'd61bd672-2142-46aa-8797-63377c9ee714',
       type: 'polyline',
-      sourceNodeId: '5d8a33ed-9ad8-4125-8033-f1d41d10ae07',
-      targetNodeId: '53135fbd-c19c-4eee-9450-db6e0d2a9627',
+      sourceNodeId: 'bug-fix-1',
+      targetNodeId: 'merge-to-common-branch',
       startPoint: {
         x: 507,
         y: 511,
@@ -1292,8 +1292,8 @@ const data = {
     {
       id: 'eb5cbfc9-69ba-4c34-9a27-f3717b370b55',
       type: 'polyline',
-      sourceNodeId: 'f8481669-541e-4eb6-9285-616388974c11',
-      targetNodeId: 'f62ed1ea-5e32-4ae4-8036-12cbd91e5f8b',
+      sourceNodeId: 'pre-prod-verify',
+      targetNodeId: 'merge-to-master-branch',
       startPoint: {
         x: 697,
         y: 491,
@@ -1330,8 +1330,8 @@ const data = {
     {
       id: '65e9000a-7401-4cc8-a8f3-a66931a12508',
       type: 'polyline',
-      sourceNodeId: '0a963d00-054a-46ca-b24f-34a90751930a',
-      targetNodeId: '5d8a33ed-9ad8-4125-8033-f1d41d10ae07',
+      sourceNodeId: 'critical-bug-2',
+      targetNodeId: 'bug-fix-1',
       startPoint: {
         x: 457,
         y: 591,
@@ -1376,8 +1376,8 @@ const data = {
     {
       id: 'b41b4e35-e4da-4b00-8c93-d969c66763df',
       type: 'polyline',
-      sourceNodeId: 'f62ed1ea-5e32-4ae4-8036-12cbd91e5f8b',
-      targetNodeId: 'c4fe91f1-c369-49eb-9d38-4fe8fb849264',
+      sourceNodeId: 'merge-to-master-branch',
+      targetNodeId: 'stg-upgrade',
       startPoint: {
         x: 667,
         y: 641,
@@ -1401,8 +1401,8 @@ const data = {
     {
       id: 'ee03f7d3-70ae-44b9-8ff4-11194667cfd1',
       type: 'polyline',
-      sourceNodeId: 'c4fe91f1-c369-49eb-9d38-4fe8fb849264',
-      targetNodeId: '1da0bf97-e312-4f5d-9a78-28e47c8b53ca',
+      sourceNodeId: 'stg-upgrade',
+      targetNodeId: 'stg-sanity-test',
       startPoint: {
         x: 827,
         y: 641,
@@ -1426,8 +1426,8 @@ const data = {
     {
       id: '23b8ace4-acd5-4171-b9dc-0461a5f70a46',
       type: 'polyline',
-      sourceNodeId: '1da0bf97-e312-4f5d-9a78-28e47c8b53ca',
-      targetNodeId: 'a6971f7c-c33a-47bc-9510-d165de13e718',
+      sourceNodeId: 'stg-sanity-test',
+      targetNodeId: 'prod-upgrade',
       startPoint: {
         x: 987,
         y: 641,
@@ -1467,8 +1467,8 @@ const data = {
     {
       id: '23d3eed1-7e82-4a8d-a509-a6bda22fac35',
       type: 'polyline',
-      sourceNodeId: 'a6971f7c-c33a-47bc-9510-d165de13e718',
-      targetNodeId: '399512d4-f919-4169-a1ec-3328699e502d',
+      sourceNodeId: 'prod-upgrade',
+      targetNodeId: 'prod-sanity-test',
       startPoint: {
         x: 1127,
         y: 641,
@@ -1508,8 +1508,8 @@ const data = {
     {
       id: '8d40b870-096e-4720-90bc-f58d8a0115c5',
       type: 'polyline',
-      sourceNodeId: '399512d4-f919-4169-a1ec-3328699e502d',
-      targetNodeId: '32c3c506-87d4-4078-86e6-8caa0bc75216',
+      sourceNodeId: 'prod-sanity-test',
+      targetNodeId: 'release',
       startPoint: {
         x: 1267,
         y: 641,
@@ -1537,8 +1537,8 @@ const data = {
     {
       id: '90a8c08d-b091-4204-a28e-17345bda9645',
       type: 'polyline',
-      sourceNodeId: 'e3a2ccdd-dcfc-4162-b049-7374cbd353f1',
-      targetNodeId: '32c3c506-87d4-4078-86e6-8caa0bc75216',
+      sourceNodeId: 'ix-documentation',
+      targetNodeId: 'release',
       startPoint: {
         x: 287,
         y: 761,
@@ -1562,8 +1562,8 @@ const data = {
     {
       id: '3f82fedc-d960-442c-984f-3ee24c9bd6f7',
       type: 'polyline',
-      sourceNodeId: '485de158-1d20-4576-9752-89bfdabd3fde',
-      targetNodeId: '32c3c506-87d4-4078-86e6-8caa0bc75216',
+      sourceNodeId: 'marketing',
+      targetNodeId: 'release',
       startPoint: {
         x: 287,
         y: 861,
@@ -1591,8 +1591,8 @@ const data = {
     {
       id: 'd91444aa-f71c-448e-9d2f-c9f0b30d484b',
       type: 'polyline',
-      sourceNodeId: '8077da5b-d952-4335-8595-c12f174c4ad7',
-      targetNodeId: 'da1056aa-fc8a-4ef6-9952-544bed1c2094',
+      sourceNodeId: 'bug-fix-2',
+      targetNodeId: 'merge-to-feature-branch',
       startPoint: {
         x: 697,
         y: 101,
@@ -1632,8 +1632,8 @@ const data = {
     {
       id: 'f15c32ee-00a4-4e6d-9d3f-5c012ac21da6',
       type: 'polyline',
-      sourceNodeId: 'a93a5154-37da-4449-8c73-75ce117a2642',
-      targetNodeId: '8077da5b-d952-4335-8595-c12f174c4ad7',
+      sourceNodeId: 'bug-report',
+      targetNodeId: 'bug-fix-2',
       startPoint: {
         x: 977,
         y: 261,
@@ -1661,8 +1661,8 @@ const data = {
     {
       id: 'e2406be8-fbd9-4749-b38e-53333d25be5e',
       type: 'polyline',
-      sourceNodeId: 'fb4ed2f5-4642-4e58-bb71-ccc2b43c6e5a',
-      targetNodeId: '8077da5b-d952-4335-8595-c12f174c4ad7',
+      sourceNodeId: 'critical-bugs-1',
+      targetNodeId: 'bug-fix-2',
       startPoint: {
         x: 1257,
         y: 251,
@@ -1695,8 +1695,8 @@ const data = {
     {
       id: '49d88401-3ec0-4a1f-9eea-77aadb4d872d',
       type: 'polyline',
-      sourceNodeId: 'd2924a8d-498f-4098-8a5d-4bd0343c3a7b',
-      targetNodeId: '0a963d00-054a-46ca-b24f-34a90751930a',
+      sourceNodeId: 'sup-test',
+      targetNodeId: 'critical-bug-2',
       startPoint: {
         x: 287,
         y: 561,
@@ -1728,8 +1728,8 @@ const data = {
     {
       id: 'e0fed141-cedc-422b-8b66-4605fd48130b',
       type: 'polyline',
-      sourceNodeId: '808586f6-a7be-4378-8296-69c44f1e464a',
-      targetNodeId: '0a963d00-054a-46ca-b24f-34a90751930a',
+      sourceNodeId: 'g11n-test',
+      targetNodeId: 'critical-bug-2',
       startPoint: {
         x: 287,
         y: 661,
