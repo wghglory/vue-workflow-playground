@@ -139,6 +139,38 @@ onMounted(() => {
   lfIstance.enableKeyboard();
   lfIstance.centerContent();
 
+  lfIstance.on('cell:mouseenter', ({ cell }: any) => {
+    if (cell.isNode()) {
+      cell.addTools([
+        {
+          name: 'boundary',
+          args: {
+            attrs: {
+              fill: '#7c68fc',
+              stroke: '#333',
+              'stroke-width': 1,
+              'fill-opacity': 0.2,
+            },
+          },
+        },
+        {
+          name: 'button-remove',
+          args: {
+            x: 0,
+            y: 0,
+            offset: { x: 10, y: 10 },
+          },
+        },
+      ]);
+    } else {
+      cell.addTools(['vertices', 'segments']);
+    }
+  });
+
+  lfIstance.on('cell:mouseleave', ({ cell }: any) => {
+    cell.removeTools();
+  });
+
   // export svg
   // lfIstance.toSVG((dataUri: string) => {
   //   // 下载
