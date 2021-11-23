@@ -69,7 +69,7 @@ const data = {
       text: {
         x: 697,
         y: 181,
-        value: 'Merge to\nfeature branch',
+        value: 'Merge to\nFeature branch',
       },
     },
     {
@@ -93,7 +93,7 @@ const data = {
       text: {
         x: 837,
         y: 181,
-        value: 'Deploy to\nfeature pipeline',
+        value: 'Deploy to\nFeature pipeline',
       },
     },
     {
@@ -150,47 +150,47 @@ const data = {
       id: 'merge-to-common-branch',
       type: 'done-rect',
       x: 1257,
-      y: 441,
+      y: 417,
       properties: {},
       text: {
         x: 1257,
-        y: 441,
+        y: 417,
         value: 'Merge to\nCommon branch',
       },
     },
     {
       id: 'deploy-to-uat',
       type: 'done-rect',
-      x: 1117,
-      y: 441,
+      x: 1118,
+      y: 417,
       properties: {},
       text: {
-        x: 1117,
-        y: 441,
+        x: 1118,
+        y: 417,
         value: 'Deploy to \nUAT',
       },
     },
     {
       id: 'regression-test-2',
       type: 'done-rect',
-      x: 977,
-      y: 441,
+      x: 979,
+      y: 417,
       properties: {},
       text: {
-        x: 977,
-        y: 441,
+        x: 979,
+        y: 417,
         value: 'Regression\nTest',
       },
     },
     {
       id: 'demo',
       type: 'done-rect',
-      x: 837,
-      y: 441,
+      x: 839,
+      y: 417,
       properties: {},
       text: {
-        x: 837,
-        y: 441,
+        x: 839,
+        y: 417,
         value: 'Demo',
       },
     },
@@ -254,12 +254,12 @@ const data = {
     {
       id: 'pre-prod-verify',
       type: 'diamond',
-      x: 697,
-      y: 441,
+      x: 696,
+      y: 417,
       properties: {},
       text: {
-        x: 697,
-        y: 441,
+        x: 696,
+        y: 417,
         value: 'Pre-Prod\nVerify?',
       },
       rx: 50,
@@ -268,11 +268,11 @@ const data = {
     {
       id: 'critical-bug-2',
       type: 'diamond',
-      x: 457,
+      x: 476,
       y: 641,
       properties: {},
       text: {
-        x: 457,
+        x: 476,
         y: 641,
         value: 'Critical\nBugs?',
       },
@@ -282,35 +282,23 @@ const data = {
     {
       id: 'merge-to-master-branch',
       type: 'rect',
-      x: 617,
+      x: 696,
       y: 641,
       properties: {},
       text: {
-        x: 617,
+        x: 696,
         y: 641,
         value: 'Merge to\nMaster branch',
       },
     },
     {
-      id: 'bug-fix-2',
-      type: 'rect',
-      x: 457,
-      y: 501,
-      properties: {},
-      text: {
-        x: 457,
-        y: 501,
-        value: 'Bug Fix 2',
-      },
-    },
-    {
       id: 'stg-upgrade',
       type: 'rect',
-      x: 777,
+      x: 840,
       y: 641,
       properties: {},
       text: {
-        x: 777,
+        x: 840,
         y: 641,
         value: 'STG\nUpgrade',
       },
@@ -318,11 +306,11 @@ const data = {
     {
       id: 'stg-sanity-test',
       type: 'rect',
-      x: 937,
+      x: 978,
       y: 641,
       properties: {},
       text: {
-        x: 937,
+        x: 978,
         y: 641,
         value: 'STG\nSanity Test',
       },
@@ -330,23 +318,23 @@ const data = {
     {
       id: 'prod-upgrade',
       type: 'rect',
-      x: 1077,
+      x: 1118,
       y: 641,
       properties: {},
       text: {
-        x: 1077,
+        x: 1118,
         y: 641,
-        value: 'PROD\nupgrade',
+        value: 'PROD\nUpgrade',
       },
     },
     {
       id: 'prod-sanity-test',
       type: 'rect',
-      x: 1217,
+      x: 1258,
       y: 641,
       properties: {},
       text: {
-        x: 1217,
+        x: 1258,
         y: 641,
         value: 'PROD\nSanity Test',
       },
@@ -354,11 +342,11 @@ const data = {
     {
       id: 'release',
       type: 'circle',
-      x: 1377,
+      x: 1259,
       y: 761,
       properties: {},
       text: {
-        x: 1377,
+        x: 1259,
         y: 761,
         value: 'Release',
       },
@@ -373,6 +361,18 @@ const data = {
         x: 697,
         y: 61,
         value: 'Bug Fix 1',
+      },
+    },
+    {
+      id: 'bug-fix-2',
+      type: 'done-rect',
+      x: 476,
+      y: 506,
+      properties: {},
+      text: {
+        x: 476,
+        y: 506,
+        value: 'Bug Fix 2',
       },
     },
   ],
@@ -894,7 +894,7 @@ const data = {
       },
       endPoint: {
         x: 1307,
-        y: 441,
+        y: 417,
       },
       properties: {},
       text: {
@@ -913,19 +913,19 @@ const data = {
         },
         {
           x: 1337,
-          y: 371,
+          y: 359,
         },
         {
           x: 1337,
-          y: 371,
+          y: 359,
         },
         {
           x: 1337,
-          y: 441,
+          y: 417,
         },
         {
           x: 1307,
-          y: 441,
+          y: 417,
         },
       ],
     },
@@ -936,37 +936,37 @@ const data = {
       targetNodeId: 'deploy-to-uat',
       startPoint: {
         x: 1207,
-        y: 441,
+        y: 417,
       },
       endPoint: {
-        x: 1167,
-        y: 441,
+        x: 1168,
+        y: 417,
       },
       properties: {},
       pointsList: [
         {
           x: 1207,
-          y: 441,
+          y: 417,
         },
         {
           x: 1177,
-          y: 441,
+          y: 417,
         },
         {
           x: 1177,
-          y: 441,
+          y: 417,
         },
         {
-          x: 1197,
-          y: 441,
+          x: 1198,
+          y: 417,
         },
         {
-          x: 1197,
-          y: 441,
+          x: 1198,
+          y: 417,
         },
         {
-          x: 1167,
-          y: 441,
+          x: 1168,
+          y: 417,
         },
       ],
     },
@@ -976,38 +976,38 @@ const data = {
       sourceNodeId: 'deploy-to-uat',
       targetNodeId: 'regression-test-2',
       startPoint: {
-        x: 1067,
-        y: 441,
+        x: 1068,
+        y: 417,
       },
       endPoint: {
-        x: 1027,
-        y: 441,
+        x: 1029,
+        y: 417,
       },
       properties: {},
       pointsList: [
         {
-          x: 1067,
-          y: 441,
+          x: 1068,
+          y: 417,
         },
         {
-          x: 1037,
-          y: 441,
+          x: 1038,
+          y: 417,
         },
         {
-          x: 1037,
-          y: 441,
+          x: 1038,
+          y: 417,
         },
         {
-          x: 1057,
-          y: 441,
+          x: 1059,
+          y: 417,
         },
         {
-          x: 1057,
-          y: 441,
+          x: 1059,
+          y: 417,
         },
         {
-          x: 1027,
-          y: 441,
+          x: 1029,
+          y: 417,
         },
       ],
     },
@@ -1017,38 +1017,38 @@ const data = {
       sourceNodeId: 'regression-test-2',
       targetNodeId: 'demo',
       startPoint: {
-        x: 927,
-        y: 441,
+        x: 929,
+        y: 417,
       },
       endPoint: {
-        x: 887,
-        y: 441,
+        x: 889,
+        y: 417,
       },
       properties: {},
       pointsList: [
         {
-          x: 927,
-          y: 441,
+          x: 929,
+          y: 417,
         },
         {
-          x: 897,
-          y: 441,
+          x: 899,
+          y: 417,
         },
         {
-          x: 897,
-          y: 441,
+          x: 899,
+          y: 417,
         },
         {
-          x: 917,
-          y: 441,
+          x: 919,
+          y: 417,
         },
         {
-          x: 917,
-          y: 441,
+          x: 919,
+          y: 417,
         },
         {
-          x: 887,
-          y: 441,
+          x: 889,
+          y: 417,
         },
       ],
     },
@@ -1058,38 +1058,38 @@ const data = {
       sourceNodeId: 'demo',
       targetNodeId: 'pre-prod-verify',
       startPoint: {
-        x: 787,
-        y: 441,
+        x: 789,
+        y: 417,
       },
       endPoint: {
-        x: 747,
-        y: 441,
+        x: 746,
+        y: 417,
       },
       properties: {},
       pointsList: [
         {
-          x: 787,
-          y: 441,
+          x: 789,
+          y: 417,
         },
         {
-          x: 757,
-          y: 441,
+          x: 759,
+          y: 417,
         },
         {
-          x: 757,
-          y: 441,
+          x: 759,
+          y: 417,
         },
         {
-          x: 777,
-          y: 441,
+          x: 776,
+          y: 417,
         },
         {
-          x: 777,
-          y: 441,
+          x: 776,
+          y: 417,
         },
         {
-          x: 747,
-          y: 441,
+          x: 746,
+          y: 417,
         },
       ],
     },
@@ -1099,8 +1099,8 @@ const data = {
       sourceNodeId: 'pre-prod-verify',
       targetNodeId: 'sup-test',
       startPoint: {
-        x: 647,
-        y: 441,
+        x: 646,
+        y: 417,
       },
       endPoint: {
         x: 187,
@@ -1109,12 +1109,12 @@ const data = {
       properties: {},
       pointsList: [
         {
-          x: 647,
-          y: 441,
+          x: 646,
+          y: 417,
         },
         {
           x: 157,
-          y: 441,
+          y: 417,
         },
         {
           x: 157,
@@ -1132,8 +1132,8 @@ const data = {
       sourceNodeId: 'pre-prod-verify',
       targetNodeId: 'g11n-test',
       startPoint: {
-        x: 647,
-        y: 441,
+        x: 646,
+        y: 417,
       },
       endPoint: {
         x: 187,
@@ -1142,12 +1142,12 @@ const data = {
       properties: {},
       pointsList: [
         {
-          x: 647,
-          y: 441,
+          x: 646,
+          y: 417,
         },
         {
           x: 157,
-          y: 441,
+          y: 417,
         },
         {
           x: 157,
@@ -1165,8 +1165,8 @@ const data = {
       sourceNodeId: 'pre-prod-verify',
       targetNodeId: 'ix-documentation',
       startPoint: {
-        x: 647,
-        y: 441,
+        x: 646,
+        y: 417,
       },
       endPoint: {
         x: 187,
@@ -1175,12 +1175,12 @@ const data = {
       properties: {},
       pointsList: [
         {
-          x: 647,
-          y: 441,
+          x: 646,
+          y: 417,
         },
         {
           x: 157,
-          y: 441,
+          y: 417,
         },
         {
           x: 157,
@@ -1198,8 +1198,8 @@ const data = {
       sourceNodeId: 'pre-prod-verify',
       targetNodeId: 'marketing',
       startPoint: {
-        x: 647,
-        y: 441,
+        x: 646,
+        y: 417,
       },
       endPoint: {
         x: 187,
@@ -1208,17 +1208,17 @@ const data = {
       properties: {},
       text: {
         x: 450,
-        y: 441,
+        y: 417,
         value: 'Yes',
       },
       pointsList: [
         {
-          x: 647,
-          y: 441,
+          x: 646,
+          y: 417,
         },
         {
           x: 157,
-          y: 441,
+          y: 417,
         },
         {
           x: 157,
@@ -1236,140 +1236,27 @@ const data = {
       sourceNodeId: 'critical-bug-2',
       targetNodeId: 'merge-to-master-branch',
       startPoint: {
-        x: 507,
+        x: 526,
         y: 641,
       },
       endPoint: {
-        x: 567,
+        x: 646,
         y: 641,
       },
       properties: {},
       text: {
-        x: 538,
+        x: 575,
         y: 641,
         value: 'No',
       },
       pointsList: [
         {
-          x: 507,
+          x: 526,
           y: 641,
         },
         {
-          x: 567,
+          x: 646,
           y: 641,
-        },
-      ],
-    },
-    {
-      id: 'd61bd672-2142-46aa-8797-63377c9ee714',
-      type: 'polyline',
-      sourceNodeId: 'bug-fix-1',
-      targetNodeId: 'merge-to-common-branch',
-      startPoint: {
-        x: 507,
-        y: 511,
-      },
-      endPoint: {
-        x: 1257,
-        y: 481,
-      },
-      properties: {},
-      pointsList: [
-        {
-          x: 507,
-          y: 511,
-        },
-        {
-          x: 1257,
-          y: 511,
-        },
-        {
-          x: 1257,
-          y: 481,
-        },
-      ],
-    },
-    {
-      id: 'eb5cbfc9-69ba-4c34-9a27-f3717b370b55',
-      type: 'polyline',
-      sourceNodeId: 'pre-prod-verify',
-      targetNodeId: 'merge-to-master-branch',
-      startPoint: {
-        x: 697,
-        y: 491,
-      },
-      endPoint: {
-        x: 617,
-        y: 601,
-      },
-      properties: {},
-      text: {
-        x: 651,
-        y: 546,
-        value: 'No',
-      },
-      pointsList: [
-        {
-          x: 697,
-          y: 491,
-        },
-        {
-          x: 697,
-          y: 546,
-        },
-        {
-          x: 617,
-          y: 546,
-        },
-        {
-          x: 617,
-          y: 601,
-        },
-      ],
-    },
-    {
-      id: '65e9000a-7401-4cc8-a8f3-a66931a12508',
-      type: 'polyline',
-      sourceNodeId: 'critical-bug-2',
-      targetNodeId: 'bug-fix-1',
-      startPoint: {
-        x: 457,
-        y: 591,
-      },
-      endPoint: {
-        x: 457,
-        y: 541,
-      },
-      properties: {},
-      text: {
-        x: 457,
-        y: 590,
-        value: 'Yes',
-      },
-      pointsList: [
-        {
-          x: 457,
-          y: 591,
-        },
-        {
-          x: 457,
-          y: 561,
-        },
-        {
-          x: 457,
-          y: 561,
-        },
-        {
-          x: 457,
-          y: 571,
-        },
-        {
-          x: 457,
-          y: 571,
-        },
-        {
-          x: 457,
-          y: 541,
         },
       ],
     },
@@ -1379,183 +1266,38 @@ const data = {
       sourceNodeId: 'merge-to-master-branch',
       targetNodeId: 'stg-upgrade',
       startPoint: {
-        x: 667,
+        x: 746,
         y: 641,
       },
       endPoint: {
-        x: 727,
+        x: 790,
         y: 641,
       },
       properties: {},
       pointsList: [
         {
-          x: 667,
+          x: 746,
           y: 641,
         },
         {
-          x: 727,
-          y: 641,
-        },
-      ],
-    },
-    {
-      id: 'ee03f7d3-70ae-44b9-8ff4-11194667cfd1',
-      type: 'polyline',
-      sourceNodeId: 'stg-upgrade',
-      targetNodeId: 'stg-sanity-test',
-      startPoint: {
-        x: 827,
-        y: 641,
-      },
-      endPoint: {
-        x: 887,
-        y: 641,
-      },
-      properties: {},
-      pointsList: [
-        {
-          x: 827,
+          x: 776,
           y: 641,
         },
         {
-          x: 887,
-          y: 641,
-        },
-      ],
-    },
-    {
-      id: '23b8ace4-acd5-4171-b9dc-0461a5f70a46',
-      type: 'polyline',
-      sourceNodeId: 'stg-sanity-test',
-      targetNodeId: 'prod-upgrade',
-      startPoint: {
-        x: 987,
-        y: 641,
-      },
-      endPoint: {
-        x: 1027,
-        y: 641,
-      },
-      properties: {},
-      pointsList: [
-        {
-          x: 987,
+          x: 776,
           y: 641,
         },
         {
-          x: 1017,
+          x: 760,
           y: 641,
         },
         {
-          x: 1017,
+          x: 760,
           y: 641,
         },
         {
-          x: 997,
+          x: 790,
           y: 641,
-        },
-        {
-          x: 997,
-          y: 641,
-        },
-        {
-          x: 1027,
-          y: 641,
-        },
-      ],
-    },
-    {
-      id: '23d3eed1-7e82-4a8d-a509-a6bda22fac35',
-      type: 'polyline',
-      sourceNodeId: 'prod-upgrade',
-      targetNodeId: 'prod-sanity-test',
-      startPoint: {
-        x: 1127,
-        y: 641,
-      },
-      endPoint: {
-        x: 1167,
-        y: 641,
-      },
-      properties: {},
-      pointsList: [
-        {
-          x: 1127,
-          y: 641,
-        },
-        {
-          x: 1157,
-          y: 641,
-        },
-        {
-          x: 1157,
-          y: 641,
-        },
-        {
-          x: 1137,
-          y: 641,
-        },
-        {
-          x: 1137,
-          y: 641,
-        },
-        {
-          x: 1167,
-          y: 641,
-        },
-      ],
-    },
-    {
-      id: '8d40b870-096e-4720-90bc-f58d8a0115c5',
-      type: 'polyline',
-      sourceNodeId: 'prod-sanity-test',
-      targetNodeId: 'release',
-      startPoint: {
-        x: 1267,
-        y: 641,
-      },
-      endPoint: {
-        x: 1377,
-        y: 711,
-      },
-      properties: {},
-      pointsList: [
-        {
-          x: 1267,
-          y: 641,
-        },
-        {
-          x: 1377,
-          y: 641,
-        },
-        {
-          x: 1377,
-          y: 711,
-        },
-      ],
-    },
-    {
-      id: '90a8c08d-b091-4204-a28e-17345bda9645',
-      type: 'polyline',
-      sourceNodeId: 'ix-documentation',
-      targetNodeId: 'release',
-      startPoint: {
-        x: 287,
-        y: 761,
-      },
-      endPoint: {
-        x: 1327,
-        y: 761,
-      },
-      properties: {},
-      pointsList: [
-        {
-          x: 287,
-          y: 761,
-        },
-        {
-          x: 1327,
-          y: 761,
         },
       ],
     },
@@ -1569,7 +1311,7 @@ const data = {
         y: 861,
       },
       endPoint: {
-        x: 1377,
+        x: 1259,
         y: 811,
       },
       properties: {},
@@ -1579,19 +1321,313 @@ const data = {
           y: 861,
         },
         {
-          x: 1377,
+          x: 1259,
           y: 861,
         },
         {
-          x: 1377,
+          x: 1259,
           y: 811,
         },
       ],
     },
     {
-      id: 'd91444aa-f71c-448e-9d2f-c9f0b30d484b',
+      id: '49d88401-3ec0-4a1f-9eea-77aadb4d872d',
+      type: 'polyline',
+      sourceNodeId: 'sup-test',
+      targetNodeId: 'critical-bug-2',
+      startPoint: {
+        x: 287,
+        y: 561,
+      },
+      endPoint: {
+        x: 426,
+        y: 641,
+      },
+      properties: {},
+      pointsList: [
+        {
+          x: 287,
+          y: 561,
+        },
+        {
+          x: 356,
+          y: 561,
+        },
+        {
+          x: 356,
+          y: 641,
+        },
+        {
+          x: 426,
+          y: 641,
+        },
+      ],
+    },
+    {
+      id: 'e0fed141-cedc-422b-8b66-4605fd48130b',
+      type: 'polyline',
+      sourceNodeId: 'g11n-test',
+      targetNodeId: 'critical-bug-2',
+      startPoint: {
+        x: 287,
+        y: 661,
+      },
+      endPoint: {
+        x: 426,
+        y: 641,
+      },
+      properties: {},
+      pointsList: [
+        {
+          x: 287,
+          y: 661,
+        },
+        {
+          x: 356.5,
+          y: 661,
+        },
+        {
+          x: 356.5,
+          y: 641,
+        },
+        {
+          x: 426,
+          y: 641,
+        },
+      ],
+    },
+    {
+      id: 'f07090a4-7435-42b0-b254-9cf4fe77f4e5',
+      type: 'polyline',
+      sourceNodeId: 'stg-upgrade',
+      targetNodeId: 'stg-sanity-test',
+      startPoint: {
+        x: 890,
+        y: 641,
+      },
+      endPoint: {
+        x: 928,
+        y: 641,
+      },
+      properties: {},
+      pointsList: [
+        {
+          x: 890,
+          y: 641,
+        },
+        {
+          x: 920,
+          y: 641,
+        },
+        {
+          x: 920,
+          y: 641,
+        },
+        {
+          x: 898,
+          y: 641,
+        },
+        {
+          x: 898,
+          y: 641,
+        },
+        {
+          x: 928,
+          y: 641,
+        },
+      ],
+    },
+    {
+      id: 'b0ecf399-fb38-4faa-9b45-fea1bd37c082',
+      type: 'polyline',
+      sourceNodeId: 'stg-sanity-test',
+      targetNodeId: 'prod-upgrade',
+      startPoint: {
+        x: 1028,
+        y: 641,
+      },
+      endPoint: {
+        x: 1068,
+        y: 641,
+      },
+      properties: {},
+      pointsList: [
+        {
+          x: 1028,
+          y: 641,
+        },
+        {
+          x: 1058,
+          y: 641,
+        },
+        {
+          x: 1058,
+          y: 641,
+        },
+        {
+          x: 1038,
+          y: 641,
+        },
+        {
+          x: 1038,
+          y: 641,
+        },
+        {
+          x: 1068,
+          y: 641,
+        },
+      ],
+    },
+    {
+      id: '9b9ea41d-368f-49a7-8e62-efd8c5c438d7',
+      type: 'polyline',
+      sourceNodeId: 'prod-upgrade',
+      targetNodeId: 'prod-sanity-test',
+      startPoint: {
+        x: 1168,
+        y: 641,
+      },
+      endPoint: {
+        x: 1208,
+        y: 641,
+      },
+      properties: {},
+      pointsList: [
+        {
+          x: 1168,
+          y: 641,
+        },
+        {
+          x: 1198,
+          y: 641,
+        },
+        {
+          x: 1198,
+          y: 641,
+        },
+        {
+          x: 1178,
+          y: 641,
+        },
+        {
+          x: 1178,
+          y: 641,
+        },
+        {
+          x: 1208,
+          y: 641,
+        },
+      ],
+    },
+    {
+      id: 'b3fe87ae-938c-44d7-bfb4-62bccbe2e68e',
+      type: 'polyline',
+      sourceNodeId: 'pre-prod-verify',
+      targetNodeId: 'merge-to-master-branch',
+      startPoint: {
+        x: 696,
+        y: 467,
+      },
+      endPoint: {
+        x: 696,
+        y: 601,
+      },
+      properties: {},
+      text: {
+        x: 696,
+        y: 547,
+        value: 'No',
+      },
+      pointsList: [
+        {
+          x: 696,
+          y: 467,
+        },
+        {
+          x: 696,
+          y: 601,
+        },
+      ],
+    },
+    {
+      id: '7c190a21-f74e-4e79-a692-5ace7a33bfd0',
+      type: 'polyline',
+      sourceNodeId: 'critical-bug-2',
+      targetNodeId: 'bug-fix-2',
+      startPoint: {
+        x: 476,
+        y: 591,
+      },
+      endPoint: {
+        x: 476,
+        y: 546,
+      },
+      properties: {},
+      text: {
+        x: 476,
+        y: 568,
+        value: 'Yes',
+      },
+      pointsList: [
+        {
+          x: 476,
+          y: 591,
+        },
+        {
+          x: 476,
+          y: 561,
+        },
+        {
+          x: 476,
+          y: 561,
+        },
+        {
+          x: 476,
+          y: 576,
+        },
+        {
+          x: 476,
+          y: 576,
+        },
+        {
+          x: 476,
+          y: 546,
+        },
+      ],
+    },
+    {
+      id: 'da1ce562-febe-4528-a792-f4ccdaf2eb7c',
       type: 'polyline',
       sourceNodeId: 'bug-fix-2',
+      targetNodeId: 'merge-to-common-branch',
+      startPoint: {
+        x: 526,
+        y: 506,
+      },
+      endPoint: {
+        x: 1257,
+        y: 457,
+      },
+      properties: {},
+      pointsList: [
+        {
+          x: 526,
+          y: 506,
+        },
+        {
+          x: 1257,
+          y: 506,
+        },
+        {
+          x: 1257,
+          y: 457,
+        },
+      ],
+    },
+    {
+      id: 'b0d71025-164e-425a-a342-a6d6f8722668',
+      type: 'polyline',
+      sourceNodeId: 'bug-fix-1',
       targetNodeId: 'merge-to-feature-branch',
       startPoint: {
         x: 697,
@@ -1630,17 +1666,17 @@ const data = {
       ],
     },
     {
-      id: 'f15c32ee-00a4-4e6d-9d3f-5c012ac21da6',
+      id: 'baa8843d-f3e9-4cde-92c8-703edcd3c7c4',
       type: 'polyline',
       sourceNodeId: 'bug-report',
-      targetNodeId: 'bug-fix-2',
+      targetNodeId: 'bug-fix-1',
       startPoint: {
         x: 977,
         y: 261,
       },
       endPoint: {
         x: 747,
-        y: 61,
+        y: 71,
       },
       properties: {},
       pointsList: [
@@ -1650,31 +1686,31 @@ const data = {
         },
         {
           x: 977,
-          y: 61,
+          y: 71,
         },
         {
           x: 747,
-          y: 61,
+          y: 71,
         },
       ],
     },
     {
-      id: 'e2406be8-fbd9-4749-b38e-53333d25be5e',
+      id: '13fe324f-d90d-46d5-a415-929574203c10',
       type: 'polyline',
       sourceNodeId: 'critical-bugs-1',
-      targetNodeId: 'bug-fix-2',
+      targetNodeId: 'bug-fix-1',
       startPoint: {
         x: 1257,
         y: 251,
       },
       endPoint: {
         x: 747,
-        y: 61,
+        y: 48,
       },
       properties: {},
       text: {
         x: 1257,
-        y: 189,
+        y: 151.83333333333326,
         value: 'Yes',
       },
       pointsList: [
@@ -1684,77 +1720,77 @@ const data = {
         },
         {
           x: 1257,
-          y: 61,
+          y: 48,
         },
         {
           x: 747,
-          y: 61,
+          y: 48,
         },
       ],
     },
     {
-      id: '49d88401-3ec0-4a1f-9eea-77aadb4d872d',
+      id: 'f30ef3f2-a982-4ce4-88d5-a3b307644bd5',
       type: 'polyline',
-      sourceNodeId: 'sup-test',
-      targetNodeId: 'critical-bug-2',
+      sourceNodeId: 'ix-documentation',
+      targetNodeId: 'release',
       startPoint: {
         x: 287,
-        y: 561,
+        y: 761,
       },
       endPoint: {
-        x: 407,
-        y: 641,
+        x: 1209,
+        y: 761,
       },
       properties: {},
       pointsList: [
         {
           x: 287,
-          y: 561,
+          y: 761,
         },
         {
-          x: 347.24242424242425,
-          y: 561,
-        },
-        {
-          x: 347.24242424242425,
-          y: 641,
-        },
-        {
-          x: 407,
-          y: 641,
+          x: 1209,
+          y: 761,
         },
       ],
     },
     {
-      id: 'e0fed141-cedc-422b-8b66-4605fd48130b',
+      id: '9b789a06-63e5-4b64-be1a-052d5b0e7cc8',
       type: 'polyline',
-      sourceNodeId: 'g11n-test',
-      targetNodeId: 'critical-bug-2',
+      sourceNodeId: 'prod-sanity-test',
+      targetNodeId: 'release',
       startPoint: {
-        x: 287,
-        y: 661,
+        x: 1258,
+        y: 681,
       },
       endPoint: {
-        x: 407,
-        y: 641,
+        x: 1259,
+        y: 711,
       },
       properties: {},
       pointsList: [
         {
-          x: 287,
-          y: 661,
+          x: 1258,
+          y: 681,
         },
         {
-          x: 347,
-          y: 661,
+          x: 1258,
+          y: 711,
         },
         {
-          x: 347,
-          y: 641,
+          x: 1258.5,
+          y: 711,
         },
         {
-          x: 407,
-          y: 641,
+          x: 1258.5,
+          y: 681,
+        },
+        {
+          x: 1259,
+          y: 681,
+        },
+        {
+          x: 1259,
+          y: 711,
         },
       ],
     },
