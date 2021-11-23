@@ -112,6 +112,7 @@ Shape.Edge.config({
 onMounted(() => {
   lf.value = new Graph({
     panning: true,
+    // scroller: true,
     snapline: true,
     selecting: {
       enabled: true,
@@ -140,16 +141,16 @@ onMounted(() => {
 
   const lfIstance = lf.value;
 
+  lfIstance.fromJSON(data);
+
   lfIstance.enableClipboard();
-  // lfIstance.centerContent();
+  lfIstance.centerContent();
 
   // export svg
   // lfIstance.toSVG((dataUri: string) => {
   //   // 下载
   //   DataUri.downloadDataUri(DataUri.svgToDataUrl(dataUri), 'chart.svg');
   // });
-
-  lfIstance.fromJSON(data);
 });
 
 onUnmounted(() => {
