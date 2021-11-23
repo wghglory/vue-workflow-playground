@@ -15,8 +15,8 @@ import TheHeader from './components/TheHeader';
 useQueryProvider();
 
 // https://www.naiveui.com/en-US/dark/docs/theme
-const themeString = ref('dark');
-const theme: any = ref(darkTheme); // darkTheme
+const themeString = ref('light');
+const theme: any = ref(); // darkTheme
 
 const lightThemeOverrides: GlobalThemeOverrides = {
   Layout: {
