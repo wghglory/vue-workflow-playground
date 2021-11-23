@@ -14,7 +14,7 @@ import '@logicflow/extension/lib/style/index.css';
 import CustomSquare from '~/components/logicflow/CustomSquare';
 import CurrentRect from '~/components/logicflow/CurrentRect';
 import DoneRect from '~/components/logicflow/DoneRect';
-import dataNew from '~/workflow-initial-data';
+import dataNew from '~/components/logicflow/initialData';
 
 // LogicFlow.use(Control); // control panel
 LogicFlow.use(Menu); // right click menu
