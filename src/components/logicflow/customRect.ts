@@ -4,7 +4,7 @@ class CustomRectModel extends RectNodeModel {
   setAttributes() {
     this.stroke = '#1E90FF';
     this.fill = '#F0F8FF';
-    this.radius = 10;
+    this.radius = 6;
     const {
       properties: { isActiveNode },
     } = this;
@@ -32,7 +32,26 @@ class CustomRectModel extends RectNodeModel {
           this.graphModel.cloneNode(node.id);
         },
       },
+      {
+        text: 'Link',
+        callback() {
+          alert('open a new tab');
+        },
+      },
+      {
+        text: 'Props',
+        className: 'lf-menu-item',
+        callback: (node: any) => {
+          const nodeModel = this.graphModel.getNodeModel(node.id);
+          alert(`
+            Props link: ${nodeModel.properties.link}
+            Node id：${node.id}
+            Node Type：${node.type}
+            Node Coordinates：(x: ${node.x}, y: ${node.y})`);
+        },
+      },
     ];
+
     const activeNodeMenu = [
       {
         text: 'Complete',
