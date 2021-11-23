@@ -112,6 +112,14 @@ Shape.Edge.config({
 onMounted(() => {
   lf.value = new Graph({
     panning: true,
+    selecting: {
+      enabled: true,
+      showNodeSelectionBox: true,
+    },
+    clipboard: {
+      enabled: true,
+      useLocalStorage: true,
+    },
     container: container.value!,
     background: {
       color: '#fffbe6', // 设置画布背景颜色
@@ -130,6 +138,8 @@ onMounted(() => {
   });
 
   const lfIstance = lf.value;
+
+  lfIstance.enableClipboard();
   // lfIstance.centerContent();
 
   // export svg
