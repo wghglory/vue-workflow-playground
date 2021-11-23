@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full relative">
+  <div class="h-full relative svg-container">
     <!-- <DragPanel :lf="lf"></DragPanel> -->
     <div ref="container" class="h-full"></div>
   </div>
@@ -77,6 +77,7 @@ onMounted(() => {
       rect: {
         radius: 6,
         strokeWidth: 1,
+        // width: 120,
       },
       circle: {
         strokeWidth: 1,
@@ -88,7 +89,8 @@ onMounted(() => {
         fontSize: 13,
       },
       edgeText: {
-        fontSize: 13,
+        fontSize: 12,
+        stroke: '#a9a9ac',
         dy: -12,
         dx: 14,
       } as any,
@@ -97,6 +99,7 @@ onMounted(() => {
       },
       polyline: {
         strokeWidth: 1,
+        stroke: '#a9a9ac',
       },
       arrow: {
         offset: 6,
@@ -243,4 +246,8 @@ onUnmounted(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.svg-container {
+  font-family: Helvetica;
+}
+</style>
