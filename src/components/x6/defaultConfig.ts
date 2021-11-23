@@ -2,8 +2,8 @@ import { Shape } from '@antv/x6';
 
 // Default Config
 Shape.Rect.config({
-  width: 80,
-  height: 40,
+  width: 120,
+  height: 80,
   attrs: {
     rect: {
       fill: '#fff',
@@ -21,6 +21,25 @@ Shape.Rect.config({
     },
   },
 });
+
+Shape.Circle.config({
+  width: 100,
+  height: 100,
+});
+Shape.Polygon.config({
+  width: 80,
+  height: 80,
+  attrs: {
+    body: {
+      fill: '#efdbff',
+      stroke: '#9254de',
+      // 指定 refPoints 属性，多边形顶点随图形大小自动缩放
+      // https://x6.antv.vision/zh/docs/api/registry/attr#refpointsresetoffset
+      refPoints: '0,10 10,0 20,10 10,20',
+    },
+  },
+});
+
 Shape.Edge.config({
   router: 'orth',
   connector: 'rounded',
@@ -36,10 +55,18 @@ Shape.Rect.define({
   },
 });
 Shape.Rect.define({
-  shape: 'green-rect',
+  shape: 'done-rect',
   attrs: {
     body: {
       stroke: 'green',
+    },
+  },
+});
+Shape.Rect.define({
+  shape: 'current-rect',
+  attrs: {
+    body: {
+      stroke: 'blue',
     },
   },
 });
