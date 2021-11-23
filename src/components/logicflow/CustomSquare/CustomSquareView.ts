@@ -18,8 +18,6 @@ export default class SquareView extends RectNode {
       ry: 6,
     };
 
-    console.log(attrs);
-
     // getShape 的返回值是一个通过 h 方法创建的 svg 元素
     return h('g', {}, [
       h('rect', { ...attrs }),

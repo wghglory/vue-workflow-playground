@@ -13,8 +13,6 @@ export default class SquareModel extends RectNodeModel {
       },
     };
 
-    console.log(this.properties);
-
     this.menu = [
       {
         text: '自定义元素菜单',
