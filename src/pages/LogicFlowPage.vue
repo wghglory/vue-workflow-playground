@@ -1,5 +1,6 @@
 <template>
   <div class="h-full relative">
+    <button @click="save">Save</button>
     <!-- <DragPanel :lf="lf"></DragPanel> -->
     <div ref="container" class="h-full"></div>
   </div>
@@ -12,49 +13,54 @@ import { Control, Menu, DndPanel, SelectionSelect } from '@logicflow/extension';
 import '@logicflow/core/dist/style/index.css';
 import '@logicflow/extension/lib/style/index.css';
 import CustomSquare from '~/components/logicflow/square';
+import data from '~/workflow-initial-data';
 
 LogicFlow.use(Control); // 控制面板
 LogicFlow.use(Menu); // 右键菜单
 LogicFlow.use(DndPanel); // 拖拽面板
 LogicFlow.use(SelectionSelect);
 
-const data = reactive({
-  nodes: [
-    {
-      id: 50,
-      type: 'rect',
-      x: 100,
-      y: 150,
-      text: '你好',
-    },
-    {
-      id: 21,
-      type: 'circle',
-      x: 300,
-      y: 150,
-    },
-    {
-      id: 10,
-      type: 'custom:square',
-      x: 300,
-      y: 200,
-      text: '正方形',
-      properties: {
-        name: 'derek',
-      },
-    },
-  ],
-  edges: [
-    {
-      type: 'polyline',
-      sourceNodeId: 50,
-      targetNodeId: 21,
-    },
-  ],
-});
+// const data = reactive({
+//   nodes: [
+//     {
+//       id: 50,
+//       type: 'rect',
+//       x: 100,
+//       y: 150,
+//       text: '你好',
+//     },
+//     {
+//       id: 21,
+//       type: 'circle',
+//       x: 300,
+//       y: 150,
+//     },
+//     {
+//       id: 10,
+//       type: 'custom:square',
+//       x: 300,
+//       y: 200,
+//       text: '正方形',
+//       properties: {
+//         name: 'derek',
+//       },
+//     },
+//   ],
+//   edges: [
+//     {
+//       type: 'polyline',
+//       sourceNodeId: 50,
+//       targetNodeId: 21,
+//     },
+//   ],
+// });
 
 const container = ref(null);
 const lf: any = reactive({});
+
+const save = () => {
+  console.log(lf.value.getGraphData());
+};
 
 onMounted(() => {
   lf.value = new LogicFlow({
@@ -62,13 +68,13 @@ onMounted(() => {
     stopScrollGraph: true,
     stopZoomGraph: true,
     background: {
-      color: 'gray',
+      // color: 'gray',
     },
     keyboard: {
       enabled: true,
     },
     grid: {
-      type: 'dot',
+      // type: 'dot',
       size: 20,
     },
     style: {
