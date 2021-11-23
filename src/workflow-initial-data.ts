@@ -14,7 +14,7 @@ const data = {
     },
     {
       id: 'pipeline-creation',
-      type: 'rect',
+      type: 'done-rect',
       x: 377,
       y: 121,
       properties: {},
@@ -26,7 +26,7 @@ const data = {
     },
     {
       id: 'design-spec-review',
-      type: 'rect',
+      type: 'done-rect',
       x: 377,
       y: 221,
       properties: {},
@@ -38,7 +38,7 @@ const data = {
     },
     {
       id: 'test-plan-review',
-      type: 'rect',
+      type: 'done-rect',
       x: 557,
       y: 301,
       properties: {},
@@ -50,7 +50,7 @@ const data = {
     },
     {
       id: 'development-ut',
-      type: 'rect',
+      type: 'done-rect',
       x: 557,
       y: 181,
       properties: {},
@@ -62,7 +62,7 @@ const data = {
     },
     {
       id: 'merge-to-feature-branch',
-      type: 'rect',
+      type: 'done-rect',
       x: 697,
       y: 181,
       properties: {},
@@ -74,7 +74,7 @@ const data = {
     },
     {
       id: 'test-case-writing',
-      type: 'rect',
+      type: 'done-rect',
       x: 697,
       y: 301,
       properties: {},
@@ -86,7 +86,7 @@ const data = {
     },
     {
       id: 'deploy-to-feature-pipeline',
-      type: 'rect',
+      type: 'done-rect',
       x: 837,
       y: 181,
       properties: {},
@@ -98,7 +98,7 @@ const data = {
     },
     {
       id: 'new-feature-test',
-      type: 'rect',
+      type: 'done-rect',
       x: 837,
       y: 301,
       properties: {},
@@ -110,7 +110,7 @@ const data = {
     },
     {
       id: 'bug-report',
-      type: 'rect',
+      type: 'done-rect',
       x: 977,
       y: 301,
       properties: {},
@@ -122,7 +122,7 @@ const data = {
     },
     {
       id: 'regression-test-1',
-      type: 'rect',
+      type: 'done-rect',
       x: 1117,
       y: 301,
       properties: {},
@@ -148,7 +148,7 @@ const data = {
     },
     {
       id: 'merge-to-common-branch',
-      type: 'rect',
+      type: 'done-rect',
       x: 1257,
       y: 441,
       properties: {},
@@ -160,7 +160,7 @@ const data = {
     },
     {
       id: 'deploy-to-uat',
-      type: 'rect',
+      type: 'done-rect',
       x: 1117,
       y: 441,
       properties: {},
@@ -172,7 +172,7 @@ const data = {
     },
     {
       id: 'regression-test-2',
-      type: 'rect',
+      type: 'done-rect',
       x: 977,
       y: 441,
       properties: {},
@@ -292,7 +292,7 @@ const data = {
       },
     },
     {
-      id: 'bug-fix-1',
+      id: 'bug-fix-2',
       type: 'rect',
       x: 457,
       y: 501,
@@ -300,7 +300,7 @@ const data = {
       text: {
         x: 457,
         y: 501,
-        value: 'Bug Fix',
+        value: 'Bug Fix 2',
       },
     },
     {
@@ -364,15 +364,15 @@ const data = {
       },
     },
     {
-      id: 'bug-fix-2',
-      type: 'rect',
+      id: 'bug-fix-1',
+      type: 'done-rect',
       x: 697,
       y: 61,
       properties: {},
       text: {
         x: 697,
         y: 61,
-        value: 'Bug Fix',
+        value: 'Bug Fix 1',
       },
     },
   ],
