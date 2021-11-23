@@ -1,5 +1,29 @@
 const data = {
   nodes: [
+    // test data
+    {
+      id: 10,
+      type: 'custom:square',
+      x: 300,
+      y: 200,
+      text: 'Square',
+      properties: {
+        name: 'derek',
+      },
+    },
+    {
+      id: 2,
+      type: 'custom:rect',
+      x: 500,
+      y: 100,
+      text: 'Custom Rect',
+      properties: {
+        name: 'derek',
+        isActiveNode: true,
+      },
+    },
+
+    // below is initial
     {
       id: '6f71e7cf-823e-470f-a3ef-c9cc92ce0012',
       type: 'circle',

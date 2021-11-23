@@ -12,8 +12,8 @@ import LogicFlow from '@logicflow/core';
 import { Control, Menu, DndPanel, SelectionSelect } from '@logicflow/extension';
 import '@logicflow/core/dist/style/index.css';
 import '@logicflow/extension/lib/style/index.css';
-import { Cog } from '@vicons/ionicons5';
 import CustomSquare from '~/components/logicflow/square';
+import CustomRect from '~/components/logicflow/customRect';
 import data from '~/workflow-initial-data';
 
 LogicFlow.use(Control); // 控制面板
@@ -87,6 +87,8 @@ onMounted(() => {
 
   lf.value.register(CustomSquare);
 
+  lf.value.register(CustomRect);
+
   lf.value.setPatternItems([
     {
       label: 'Select',
@@ -129,22 +131,8 @@ onMounted(() => {
     },
   ]);
 
-  //  （必须在 lf.render() 之前设置）
   lf.value.setMenuConfig({
     nodeMenu: [
-      {
-        text: 'Complete',
-        callback(node: any) {
-          console.log(node);
-          alert(`complete ${node}`);
-        },
-      },
-      {
-        text: 'Fail',
-        callback(node: any) {
-          alert(`fail ${node}`);
-        },
-      },
       {
         text: 'Delete',
         callback(node: any) {
@@ -154,7 +142,7 @@ onMounted(() => {
       // {
       //   text: 'Edit Text',
       //   callback(node: any) {
-      //     // lf.value.setProperties(node.id, node.value); // which one???
+      //     lf.value.setElementStateById(node.id, 2);  // not working
       //   },
       // },
       {
@@ -207,6 +195,10 @@ onMounted(() => {
   lf.value.on('custom:square:event', (res: any) => {
     console.log(res);
     alert('接收到自定义节点菜单触发事件');
+  });
+
+  lf.value.on('custom:event', (res: any) => {
+    console.log(res);
   });
 });
 </script>
