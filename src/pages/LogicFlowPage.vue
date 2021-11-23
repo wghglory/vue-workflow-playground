@@ -14,47 +14,47 @@ import '@logicflow/extension/lib/style/index.css';
 import CustomSquare from '~/components/logicflow/CustomSquare';
 import CurrentRect from '~/components/logicflow/CurrentRect';
 import DoneRect from '~/components/logicflow/DoneRect';
-import data from '~/workflow-initial-data';
+import dataNew from '~/workflow-initial-data';
 
 // LogicFlow.use(Control); // control panel
 LogicFlow.use(Menu); // right click menu
 LogicFlow.use(DndPanel);
 LogicFlow.use(SelectionSelect);
 
-// const data = reactive({
-//   nodes: [
-//     {
-//       id: 50,
-//       type: 'rect',
-//       x: 100,
-//       y: 150,
-//       text: '你好',
-//     },
-//     {
-//       id: 21,
-//       type: 'circle',
-//       x: 300,
-//       y: 150,
-//     },
-//     {
-//       id: 10,
-//       type: 'custom:square',
-//       x: 300,
-//       y: 200,
-//       text: '正方形',
-//       properties: {
-//         name: 'derek',
-//       },
-//     },
-//   ],
-//   edges: [
-//     {
-//       type: 'polyline',
-//       sourceNodeId: 50,
-//       targetNodeId: 21,
-//     },
-//   ],
-// });
+const data = reactive({
+  nodes: [
+    {
+      id: 50,
+      type: 'rect',
+      x: 100,
+      y: 150,
+      text: '你好',
+    },
+    {
+      id: 21,
+      type: 'circle',
+      x: 300,
+      y: 150,
+    },
+    {
+      id: 10,
+      type: 'custom:square',
+      x: 300,
+      y: 200,
+      text: '正方形',
+      properties: {
+        name: 'derek',
+      },
+    },
+  ],
+  edges: [
+    {
+      type: 'polyline',
+      sourceNodeId: 50,
+      targetNodeId: 21,
+    },
+  ],
+});
 
 const container = ref(null);
 const lf: any = reactive({});
@@ -195,12 +195,12 @@ onMounted(() => {
 
   lf.value.render(data);
 
-  lf.value.on('custom:square:event', (res: any) => {
+  lf.value.on('custom-square:event', (res: any) => {
     console.log(res);
     alert('接收到自定义节点菜单触发事件');
   });
 
-  lf.value.on('custom:event', (res: any) => {
+  lf.value.on('current-rect:event', (res: any) => {
     console.log(res);
   });
 });
