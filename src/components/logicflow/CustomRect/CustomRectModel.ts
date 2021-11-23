@@ -1,12 +1,12 @@
-import { RectNode, RectNodeModel } from '@logicflow/core';
+import { RectNodeModel } from '@logicflow/core';
 
-class CustomRectModel extends RectNodeModel {
+export default class CustomRectModel extends RectNodeModel {
   setAttributes() {
     this.stroke = '#1E90FF';
     this.fill = '#F0F8FF';
     this.radius = 6;
     const {
-      properties: { isActiveNode },
+      properties: { isActive },
     } = this;
 
     const defaultMenu = [
@@ -56,7 +56,6 @@ class CustomRectModel extends RectNodeModel {
       {
         text: 'Complete',
         callback(node: any) {
-          console.log(node);
           alert(`complete ${node}`);
         },
       },
@@ -68,16 +67,10 @@ class CustomRectModel extends RectNodeModel {
       },
     ];
 
-    if (isActiveNode) {
+    if (isActive) {
       this.menu = [...activeNodeMenu, ...defaultMenu];
     } else {
       this.menu = defaultMenu;
     }
   }
 }
-
-export default {
-  type: 'custom:rect',
-  view: RectNode,
-  model: CustomRectModel,
-};
