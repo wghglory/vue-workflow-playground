@@ -83,19 +83,31 @@ body {
   height: 100vh;
 }
 
-.current-node {
+.current-node rect {
   transform-origin: 50%;
   transform-box: fill-box;
   animation: upDown 1s ease infinite alternate;
+}
+.current-node svg path {
+  transform-origin: 50%;
+  animation: rotate 1s linear infinite;
 }
 
 @keyframes upDown {
   0% {
     transform: rotateX(0);
   }
-
   100% {
     transform: rotateX(20deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 </style>
