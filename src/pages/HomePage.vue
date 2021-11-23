@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center flex-1 p-9 bg-cds-light dark:bg-cds-dark">
+  <div class="flex flex-col justify-center items-center flex-1 p-9">
     <h1 cds-text="display" class="mb-4">{{ l10n('home.title') }}</h1>
     <h2 cds-text="subtitle" class="mb-12 sm:mb-24">{{ l10n('home.subtitle') }}</h2>
     <section class="grid gap-x-14 gap-y-10 sm:gap-y-28 sm:grid-cols-2 md:px-16 pb-10">
