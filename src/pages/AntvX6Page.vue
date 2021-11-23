@@ -14,6 +14,7 @@ const data: any = reactive({
       x: 200,
       y: 350,
       label: 'Default',
+      // angle: -5,
     },
     {
       id: 50,
@@ -71,6 +72,10 @@ const data: any = reactive({
         },
       },
     },
+    {
+      source: 50,
+      target: 1,
+    },
   ],
 });
 
@@ -97,6 +102,10 @@ Shape.Rect.config({
       textVerticalAnchor: 'middle',
     },
   },
+});
+Shape.Edge.config({
+  router: 'orth',
+  connector: 'rounded',
 });
 
 onMounted(() => {
