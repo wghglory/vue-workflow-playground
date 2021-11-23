@@ -171,6 +171,23 @@ onMounted(() => {
     cell.removeTools();
   });
 
+  lfIstance.addNode({
+    x: 460,
+    y: 120,
+    width: 360,
+    height: 120,
+    shape: 'text-block',
+    text: `There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.`,
+    attrs: {
+      body: {
+        fill: '#efdbff',
+        stroke: '#9254de',
+        rx: 4,
+        ry: 4,
+      },
+    },
+  });
+
   // export svg
   // lfIstance.toSVG((dataUri: string) => {
   //   // 下载
