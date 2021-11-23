@@ -16,7 +16,7 @@ useQueryProvider();
 
 // https://www.naiveui.com/en-US/dark/docs/theme
 const themeString = ref('light');
-const theme: any = ref(); // darkTheme
+const theme: any = ref(null); // darkTheme
 
 const lightThemeOverrides: GlobalThemeOverrides = {
   Layout: {
