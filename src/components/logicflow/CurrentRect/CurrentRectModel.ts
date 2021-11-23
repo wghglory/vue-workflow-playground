@@ -1,6 +1,6 @@
 import { RectNodeModel } from '@logicflow/core';
 
-export default class CustomRectModel extends RectNodeModel {
+export default class CurrentRectModel extends RectNodeModel {
   setAttributes() {
     this.stroke = '#1E90FF';
     this.fill = '#F0F8FF';

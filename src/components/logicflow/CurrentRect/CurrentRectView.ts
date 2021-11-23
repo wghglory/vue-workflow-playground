@@ -1,6 +1,6 @@
 import { RectNode, h } from '@logicflow/core';
 
-export default class CustomRectView extends RectNode {
+export default class CurrentRectView extends RectNode {
   getShape() {
     // 通过 getAttributes 获取 model 中的属性
     const { x, y, width, height, fill, stroke, strokeWidth } = this.getAttributes();
@@ -21,7 +21,7 @@ export default class CustomRectView extends RectNode {
     const props = this.getProperties();
     // console.log(props);
     // getShape 的返回值是一个通过 h 方法创建的 svg 元素
-    return h('g', { class: props.isActive ? 'active-node' : '' }, [
+    return h('g', { class: props.isActive ? 'current-node' : '' }, [
       h('rect', { ...attrs }),
       h(
         'svg',

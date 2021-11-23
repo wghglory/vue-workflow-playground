@@ -12,7 +12,7 @@ import { Control, Menu, DndPanel, SelectionSelect } from '@logicflow/extension';
 import '@logicflow/core/dist/style/index.css';
 import '@logicflow/extension/lib/style/index.css';
 import CustomSquare from '~/components/logicflow/CustomSquare';
-import CustomRect from '~/components/logicflow/CustomRect';
+import CurrentRect from '~/components/logicflow/CurrentRect';
 import data from '~/workflow-initial-data';
 
 LogicFlow.use(Control); // 控制面板
@@ -79,7 +79,7 @@ onMounted(() => {
 
   lf.value.register(CustomSquare);
 
-  lf.value.register(CustomRect);
+  lf.value.register(CurrentRect);
 
   lf.value.setPatternItems([
     {

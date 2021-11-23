@@ -83,7 +83,7 @@ body {
   height: 100vh;
 }
 
-.active-node {
+.current-node {
   transform-origin: 50%;
   transform-box: fill-box;
   animation: upDown 1s ease infinite alternate;
