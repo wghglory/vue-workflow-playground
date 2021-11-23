@@ -1,5 +1,5 @@
 <template>
-  <div ref="container" class="h-full"></div>
+  <div ref="container" id="graph-container" class="h-full"></div>
 </template>
 
 <script setup lang="ts">
@@ -16,7 +16,6 @@ import data from '~/components/x6/InitialData';
 //       x: 200,
 //       y: 350,
 //       label: 'Default',
-//       // angle: -5,
 //     },
 //     {
 //       id: 2,
@@ -24,14 +23,13 @@ import data from '~/components/x6/InitialData';
 //       x: 400,
 //       y: 450,
 //       label: 'Red Rect',
-//       // angle: -5,
 //     },
 //     {
 //       id: 3,
-//       shape: 'green-rect',
+//       shape: 'current-rect',
 //       x: 500,
 //       y: 450,
-//       label: 'Green Rect',
+//       label: 'Current Rect',
 //       // angle: -5,
 //     },
 //     {
@@ -103,14 +101,10 @@ const lf: any = reactive({});
 
 onMounted(() => {
   lf.value = new Graph({
-    // keyboard: true,
+    keyboard: true,
     panning: true,
     // scroller: true,
     snapline: true,
-    selecting: {
-      enabled: true,
-      showNodeSelectionBox: true,
-    },
     clipboard: {
       enabled: true,
       useLocalStorage: true,
@@ -123,23 +117,48 @@ onMounted(() => {
       size: 10, // 网格大小 10px
       visible: true, // 渲染网格背景
     },
-    // grid: false,
+    connecting: {
+      router: 'orth',
+    },
+    mousewheel: {
+      enabled: true,
+      zoomAtMousePosition: true,
+      modifiers: 'ctrl',
+      minScale: 0.5,
+      maxScale: 3,
+    },
+    highlighting: {
+      magnetAdsorbed: {
+        name: 'stroke',
+        args: {
+          attrs: {
+            fill: '#5F95FF',
+            stroke: '#5F95FF',
+          },
+        },
+      },
+    },
+    resizing: true,
+    rotating: true,
+    selecting: {
+      enabled: true,
+      rubberband: true,
+      showNodeSelectionBox: true,
+    },
+
     // background: {
     //   color: '#F5FBFD',
     // },
-    resizing: {
-      enabled: true,
-    },
   });
 
-  const lfIstance = lf.value;
+  const lfInstance = lf.value;
 
-  lfIstance.fromJSON(data);
+  lfInstance.fromJSON(data);
 
-  lfIstance.centerContent();
+  lfInstance.centerContent();
 
   // register tools
-  // lfIstance.on('cell:mouseenter', ({ cell }: any) => {
+  // lfInstance.on('cell:mouseenter', ({ cell }: any) => {
   //   if (cell.isNode()) {
   //     cell.addTools([
   //       {
@@ -167,11 +186,11 @@ onMounted(() => {
   //   }
   // });
 
-  // lfIstance.on('cell:mouseleave', ({ cell }: any) => {
+  // lfInstance.on('cell:mouseleave', ({ cell }: any) => {
   //   cell.removeTools();
   // });
 
-  // lfIstance.addNode({
+  // lfInstance.addNode({
   //   x: 460,
   //   y: 120,
   //   width: 360,
@@ -189,10 +208,97 @@ onMounted(() => {
   // });
 
   // export svg
-  // lfIstance.toSVG((dataUri: string) => {
+  // lfInstance.toSVG((dataUri: string) => {
   //   // 下载
   //   DataUri.downloadDataUri(DataUri.svgToDataUrl(dataUri), 'chart.svg');
   // });
+
+  // 控制连接桩显示/隐藏
+  const showPorts = (ports: NodeListOf<SVGElement>, show: boolean) => {
+    for (let i = 0, len = ports.length; i < len; i += 1) {
+      // eslint-disable-next-line no-param-reassign
+      ports[i].style.visibility = show ? 'visible' : 'hidden';
+    }
+  };
+  lfInstance.on('node:mouseenter', () => {
+    const c = document.getElementById('graph-container')!;
+    const ports = c.querySelectorAll('.x6-port-body') as NodeListOf<SVGElement>;
+    showPorts(ports, true);
+  });
+  lfInstance.on('node:mouseleave', () => {
+    const c = document.getElementById('graph-container')!;
+    const ports = c.querySelectorAll('.x6-port-body') as NodeListOf<SVGElement>;
+    showPorts(ports, false);
+  });
+
+  // copy cut paste
+  lfInstance.bindKey(['meta+c', 'ctrl+c'], () => {
+    const cells = lfInstance.getSelectedCells();
+    if (cells.length) {
+      lfInstance.copy(cells);
+    }
+    return false;
+  });
+  lfInstance.bindKey(['meta+x', 'ctrl+x'], () => {
+    const cells = lfInstance.getSelectedCells();
+    if (cells.length) {
+      lfInstance.cut(cells);
+    }
+    return false;
+  });
+  lfInstance.bindKey(['meta+v', 'ctrl+v'], () => {
+    if (!lfInstance.isClipboardEmpty()) {
+      const cells = lfInstance.paste({ offset: 32 });
+      lfInstance.cleanSelection();
+      lfInstance.select(cells);
+    }
+    return false;
+  });
+
+  // undo redo
+  lfInstance.bindKey(['meta+z', 'ctrl+z'], () => {
+    if (lfInstance.history.canUndo()) {
+      lfInstance.history.undo();
+    }
+    return false;
+  });
+  lfInstance.bindKey(['meta+shift+z', 'ctrl+shift+z'], () => {
+    if (lfInstance.history.canRedo()) {
+      lfInstance.history.redo();
+    }
+    return false;
+  });
+
+  // select all
+  lfInstance.bindKey(['meta+a', 'ctrl+a'], () => {
+    const nodes = lfInstance.getNodes();
+    if (nodes) {
+      lfInstance.select(nodes);
+    }
+  });
+
+  // delete
+  lfInstance.bindKey('backspace', () => {
+    const cells = lfInstance.getSelectedCells();
+    if (cells.length) {
+      lfInstance.removeCells(cells);
+    }
+  });
+
+  // zoom
+  lfInstance.bindKey(['ctrl+1', 'meta+1'], () => {
+    const zoom = lfInstance.zoom();
+    if (zoom < 1.5) {
+      lfInstance.zoom(0.1);
+    }
+  });
+  lfInstance.bindKey(['ctrl+2', 'meta+2'], () => {
+    const zoom = lfInstance.zoom();
+    if (zoom > 0.5) {
+      lfInstance.zoom(-0.1);
+    }
+  });
+  // #endregion
 });
 
 onUnmounted(() => {
