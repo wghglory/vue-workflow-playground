@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { ref, reactive, onMounted, onUnmounted } from 'vue';
-import { Graph, Shape } from '@antv/x6';
+import { Graph, Shape, Addon } from '@antv/x6';
 
 const data: any = reactive({
   nodes: [
@@ -111,6 +111,7 @@ Shape.Edge.config({
 
 onMounted(() => {
   lf.value = new Graph({
+    // keyboard: true,
     panning: true,
     // scroller: true,
     snapline: true,
@@ -134,7 +135,7 @@ onMounted(() => {
     // background: {
     //   color: '#F5FBFD',
     // },
-    keyboard: {
+    resizing: {
       enabled: true,
     },
   });
@@ -144,6 +145,7 @@ onMounted(() => {
   lfIstance.fromJSON(data);
 
   lfIstance.enableClipboard();
+  lfIstance.enableKeyboard();
   lfIstance.centerContent();
 
   // export svg
