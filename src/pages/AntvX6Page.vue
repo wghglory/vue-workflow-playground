@@ -112,6 +112,7 @@ Shape.Edge.config({
 onMounted(() => {
   lf.value = new Graph({
     panning: true,
+    snapline: true,
     selecting: {
       enabled: true,
       showNodeSelectionBox: true,
