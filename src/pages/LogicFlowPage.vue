@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { ref, reactive, onMounted } from 'vue';
 import LogicFlow from '@logicflow/core';
-import { Menu, DndPanel, SelectionSelect } from '@logicflow/extension';
+import { Menu, DndPanel, SelectionSelect, BpmnElement, BpmnXmlAdapter } from '@logicflow/extension';
 import '@logicflow/core/dist/style/index.css';
 import '@logicflow/extension/lib/style/index.css';
 import CustomSquare from '~/components/logicflow/CustomSquare';
@@ -20,6 +20,8 @@ import data from '~/components/logicflow/InitialData';
 LogicFlow.use(Menu); // right click menu
 LogicFlow.use(DndPanel);
 LogicFlow.use(SelectionSelect);
+// LogicFlow.use(BpmnElement);
+// LogicFlow.use(BpmnXmlAdapter);
 
 const container = ref(null);
 const lf: any = reactive({});
@@ -33,7 +35,7 @@ onMounted(() => {
     // isSilentMode: true,
     grid: false,
     background: {
-      color: '#F5FBFD',
+      // color: '#F5FBFD',
     },
     keyboard: {
       enabled: true,

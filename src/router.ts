@@ -3,14 +3,12 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import HomePage from './pages/HomePage.vue';
 import VuexPage from './pages/VuexPage.vue';
 import LogicFlowPage from './pages/LogicFlowPage.vue';
-import AntvX6Page from './pages/AntvX6Page.vue';
 
 const routes: RouteRecordRaw[] = [
   { path: '/', name: 'Home', component: HomePage },
   { path: '/vuex', name: 'Vuex', component: VuexPage },
   { path: '/api', name: 'API', component: () => import('~/pages/ApiPage.vue') },
   { path: '/logic-flow', name: 'LogicFlow', component: LogicFlowPage },
-  { path: '/x6', name: 'AntvX6', component: AntvX6Page },
   { path: '/not-found', name: 'NotFound', component: () => import('~/pages/NotFoundPage.vue') },
   {
     path: '/:currentPath(.*)*', // no matching found

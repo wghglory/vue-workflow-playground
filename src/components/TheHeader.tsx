@@ -27,10 +27,6 @@ const menuOptions = [
     label: () => <RouterLink to={{ name: 'LogicFlow' }}>Logic Flow</RouterLink>,
     key: 'logicFlow',
   },
-  {
-    label: () => <RouterLink to={{ name: 'AntvX6' }}>X6</RouterLink>,
-    key: 'antvX6',
-  },
 ];
 
 export default defineComponent({

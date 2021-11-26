@@ -19,7 +19,7 @@ export default defineConfig({
   ],
   base: './', // build path
   server: {
-    port: 4000,
+    port: 4001,
     open: true,
     cors: true,
     proxy: {
