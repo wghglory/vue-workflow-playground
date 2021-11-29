@@ -7,12 +7,20 @@ import router from './router';
 
 import i18nClient from './i18n/i18nClient';
 
-(async () => {
+async function prepare() {
   await i18nClient.coreService.loadI18nData();
-})();
 
-const app = createApp(App);
-app.use(store, key);
-app.use(router);
+  if (process.env.NODE_ENV === 'development') {
+    const worker = await (await import('./mocks/browser')).default;
+    return worker.start();
+  }
+  return Promise.resolve();
+}
 
-app.mount('#app');
+prepare().then(() => {
+  const app = createApp(App);
+  app.use(store, key);
+  app.use(router);
+
+  app.mount('#app');
+});

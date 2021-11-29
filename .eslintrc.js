@@ -23,6 +23,10 @@ module.exports = {
     'import/extensions': [0, 'never'],
     'import/no-unresolved': [0, 'never'],
     'vue/no-v-model-argument': [0, 'never'],
+    'import/no-extraneous-dependencies': [
+      0,
+      { devDependencies: false, optionalDependencies: false, peerDependencies: false },
+    ],
   },
   globals: {
     // import { defineProps } from 'vue'

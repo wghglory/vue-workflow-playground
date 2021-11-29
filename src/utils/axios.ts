@@ -3,13 +3,13 @@ import axios, { AxiosRequestConfig } from 'axios';
 export const CDS_AUTH_TOKEN = 'x-vcloud-authorization';
 
 const http = axios.create({
-  baseURL: `${import.meta.env.VITE_APP_HOST}/api/pcdl/v1/`,
+  baseURL: `${import.meta.env.VITE_APP_HOST}/api/`,
   withCredentials: true,
   timeout: 10000,
 });
 
 function vCDRequestInterceptor(config: AxiosRequestConfig) {
-  const requestConfig: AxiosRequestConfig = { headers: undefined };
+  const requestConfig: AxiosRequestConfig = { ...config };
 
   // except login API, all other API request header needs token
   if (!config.data?.login) {
